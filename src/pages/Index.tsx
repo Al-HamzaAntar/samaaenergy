@@ -1,11 +1,10 @@
 
 import { useState } from "react";
-import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail } from "lucide-react";
+import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail, Target, Eye, Users, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import EnergyCalculator from "@/components/EnergyCalculator";
 import SolarBenefits from "@/components/SolarBenefits";
 import HeroSection from "@/components/HeroSection";
 
@@ -120,7 +119,119 @@ const Index = () => {
       </section>
 
       <SolarBenefits />
-      <EnergyCalculator />
+
+      {/* Our Ambitions Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Our Ambitions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading the way towards a sustainable and energy-efficient future
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Target className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Message</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To make the built environment a leading example of energy efficiency in the region and the world.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Eye className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To make Yemen one of the most sustainable cities in the world
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Users className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Objectives</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Establishment of a contracting market for the implementation of energy works, services and production lines in Yemen
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Reviews Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Customer Reviews
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              What our clients say about our solar energy solutions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center justify-center mb-6">
+                  <Quote className="h-12 w-12 text-blue-600" />
+                </div>
+                <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                  "Here the opinion is placed"
+                </p>
+                <div className="text-center">
+                  <h4 className="text-xl font-bold text-gray-900">Mohammed</h4>
+                  <p className="text-blue-600 font-semibold">UNICEF</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center justify-center mb-6">
+                  <Quote className="h-12 w-12 text-green-600" />
+                </div>
+                <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                  "Here the opinion is placed"
+                </p>
+                <div className="text-center">
+                  <h4 className="text-xl font-bold text-gray-900">Ahmed</h4>
+                  <p className="text-green-600 font-semibold">Al Rabi Energy Systems</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-yellow-50 to-orange-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-center justify-center mb-6">
+                  <Quote className="h-12 w-12 text-yellow-600" />
+                </div>
+                <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                  "Here the opinion is placed"
+                </p>
+                <div className="text-center">
+                  <h4 className="text-xl font-bold text-gray-900">Ali</h4>
+                  <p className="text-yellow-600 font-semibold">FAO</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Contact CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
