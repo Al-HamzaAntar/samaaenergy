@@ -1,119 +1,85 @@
 
 import { useState } from "react";
-import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail, Target, Eye, Users, Quote } from "lucide-react";
+import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail, Target, Eye, Users, Quote, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import SolarBenefits from "@/components/SolarBenefits";
 import HeroSection from "@/components/HeroSection";
 
 const Index = () => {
-  const [monthlyBill, setMonthlyBill] = useState<number>(150);
-  const [roofSize, setRoofSize] = useState<number>(1500);
-
-  // Calculate estimated savings
-  const annualSavings = monthlyBill * 12 * 0.9; // 90% savings estimate
-  const systemCost = roofSize * 4; // $4 per sq ft estimate
-  const paybackYears = Math.round(systemCost / annualSavings);
-
   return (
     <div className="min-h-screen">
       <HeroSection />
       
-      {/* Quick Calculator Section */}
+      {/* Our Customers Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Calculate Your Solar Savings
+              Our Customers
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get an instant estimate of how much you can save with solar energy for your home or business
+              Trusted by leading organizations worldwide
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-0 shadow-xl">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-2xl">
-                  <Calculator className="h-6 w-6 text-blue-600" />
-                  Solar Savings Calculator
-                </CardTitle>
-                <CardDescription className="text-lg">
-                  Enter your details to get a personalized solar estimate
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div>
-                  <Label htmlFor="monthly-bill" className="text-base font-semibold">Monthly Electric Bill ($)</Label>
-                  <Input
-                    id="monthly-bill"
-                    type="number"
-                    value={monthlyBill}
-                    onChange={(e) => setMonthlyBill(Number(e.target.value))}
-                    placeholder="150"
-                    className="mt-2 h-12 text-lg"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="roof-size" className="text-base font-semibold">Available Roof Space (sq ft)</Label>
-                  <Input
-                    id="roof-size"
-                    type="number"
-                    value={roofSize}
-                    onChange={(e) => setRoofSize(Number(e.target.value))}
-                    placeholder="1500"
-                    className="mt-2 h-12 text-lg"
-                  />
-                </div>
-                <Button className="w-full h-12 text-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-                  Get Detailed Quote
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            <div className="space-y-6">
-              <Card className="bg-gradient-to-br from-green-500 to-emerald-600 text-white border-0 shadow-xl">
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-green-100 text-lg">Annual Savings</p>
-                      <p className="text-4xl font-bold">${annualSavings.toLocaleString()}</p>
-                      <p className="text-green-100 text-sm mt-1">Based on 90% bill reduction</p>
-                    </div>
-                    <TrendingUp className="h-12 w-12 text-green-100" />
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white border-0 shadow-xl">
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-blue-100 text-lg">Payback Period</p>
-                      <p className="text-4xl font-bold">{paybackYears} years</p>
-                      <p className="text-blue-100 text-sm mt-1">Return on investment</p>
-                    </div>
-                    <Home className="h-12 w-12 text-blue-100" />
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gradient-to-br from-orange-500 to-red-500 text-white border-0 shadow-xl">
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-orange-100 text-lg">Estimated System Cost</p>
-                      <p className="text-4xl font-bold">${systemCost.toLocaleString()}</p>
-                      <p className="text-orange-100 text-sm mt-1">Before incentives</p>
-                    </div>
-                    <Zap className="h-12 w-12 text-orange-100" />
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <Carousel className="w-full">
+              <CarouselContent>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <CardContent className="p-8 text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Users className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900">WFP</h3>
+                      <p className="text-blue-600 font-semibold mt-2">World Food Programme</p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <CardContent className="p-8 text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Users className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900">UNICEF</h3>
+                      <p className="text-green-600 font-semibold mt-2">United Nations Children's Fund</p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <Card className="bg-gradient-to-br from-yellow-50 to-orange-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <CardContent className="p-8 text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Users className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900">WHO</h3>
+                      <p className="text-yellow-600 font-semibold mt-2">World Health Organization</p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <Card className="bg-gradient-to-br from-purple-50 to-pink-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <CardContent className="p-8 text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Users className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900">SAVE THE CHILDREN</h3>
+                      <p className="text-purple-600 font-semibold mt-2">International Organization</p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>
@@ -233,31 +199,85 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact CTA Section */}
+      {/* Contact Us Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Go Solar?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who have made the switch to clean, 
-            renewable solar energy. Get your free consultation today.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold px-8 py-4 text-lg">
-              <Phone className="mr-2 h-5 w-5" />
-              Call for Free Quote
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg">
-              <Mail className="mr-2 h-5 w-5" />
-              Email Consultation
-            </Button>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Contact Us
+            </h2>
+            <h3 className="text-2xl font-semibold text-gray-300 mb-8">
+              Let's stay in touch
+            </h3>
           </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4 mb-6">
+                    <MapPin className="h-6 w-6 text-yellow-400 mt-1" />
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Our Location</h4>
+                      <p className="text-gray-300 leading-relaxed">
+                        Yemen - Sana'a - Al-Asbahi City - Forty Street<br />
+                        In front of the Royal Brewster Restaurant
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 mb-6">
+                    <Mail className="h-6 w-6 text-yellow-400 mt-1" />
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Email Us</h4>
+                      <p className="text-gray-300">info@samaaenergy.com</p>
+                      <p className="text-gray-300">hossam@samaaenergy.com</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <Phone className="h-6 w-6 text-yellow-400 mt-1" />
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Call Us</h4>
+                      <p className="text-gray-300">00967777754100</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold px-8 py-4 text-lg">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call for Free Quote
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email Consultation
+                </Button>
+              </div>
+            </div>
 
-          <p className="text-gray-400">
-            📞 1-800-SOLAR-01 | ✉️ info@solarenergy.com
-          </p>
+            {/* Google Maps */}
+            <div className="relative">
+              <Card className="bg-white/10 border-white/20 backdrop-blur-sm overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative h-96 w-full">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.326373455!2d44.2018!3d15.3694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDIyJzA5LjgiTiA0NMKwMTInMDYuNSJF!5e0!3m2!1sen!2s!4v1"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Sama Energy Location - Yemen, Sana'a, Al-Asbahi City, Forty Street"
+                    ></iframe>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
     </div>
