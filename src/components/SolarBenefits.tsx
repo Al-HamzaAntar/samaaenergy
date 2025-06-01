@@ -1,106 +1,178 @@
 
-import { Leaf, DollarSign, Home, Shield, Zap, TrendingUp } from "lucide-react";
+import { 
+  Leaf, 
+  DollarSign, 
+  Home, 
+  Shield, 
+  Zap, 
+  TrendingUp, 
+  Award,
+  Users,
+  Clock,
+  CheckCircle
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const benefits = [
   {
     icon: DollarSign,
-    title: "Reduce Energy Bills",
-    description: "Save 50-90% on your monthly electricity costs with solar power",
+    title: "Reduce Energy Costs",
+    description: "Cut your electricity bills by up to 90% with our high-efficiency solar panels",
     color: "from-green-500 to-emerald-500"
   },
   {
     icon: Leaf,
     title: "Environmental Impact",
-    description: "Reduce your carbon footprint and help combat climate change",
+    description: "Reduce your carbon footprint and contribute to a sustainable future",
     color: "from-emerald-500 to-teal-500"
   },
   {
     icon: Home,
-    title: "Increase Home Value",
-    description: "Solar installations can increase your property value by 3-4%",
+    title: "Increase Property Value",
+    description: "Solar installations can increase your property value by 3-4% on average",
     color: "from-blue-500 to-indigo-500"
   },
   {
     icon: Shield,
     title: "Energy Independence",
-    description: "Reduce dependence on grid electricity and protect against rate hikes",
+    description: "Protect yourself from rising electricity costs and power outages",
     color: "from-purple-500 to-pink-500"
   },
   {
-    icon: Zap,
-    title: "Reliable Technology",
-    description: "Modern solar panels come with 25+ year warranties and proven durability",
+    icon: Award,
+    title: "Premium Quality",
+    description: "Tier-1 solar panels with 25+ year performance warranties",
     color: "from-yellow-500 to-orange-500"
   },
   {
     icon: TrendingUp,
     title: "Government Incentives",
-    description: "Take advantage of federal tax credits and local rebate programs",
+    description: "Maximize savings with federal tax credits and local rebate programs",
     color: "from-red-500 to-pink-500"
+  }
+];
+
+const services = [
+  {
+    icon: Home,
+    title: "Residential Solar",
+    description: "Custom solar solutions for your home with professional installation"
+  },
+  {
+    icon: Users,
+    title: "Commercial Solar",
+    description: "Scalable solar systems for businesses and industrial facilities"
+  },
+  {
+    icon: Zap,
+    title: "Energy Storage",
+    description: "Battery storage solutions for energy independence and backup power"
+  },
+  {
+    icon: Clock,
+    title: "Maintenance & Support",
+    description: "Comprehensive maintenance packages to ensure optimal performance"
   }
 ];
 
 const SolarBenefits = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Solar Energy?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover the many benefits of switching to clean, renewable solar power for your home
-          </p>
-        </div>
+    <>
+      {/* Why Choose Solar Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Why Choose Solar Energy?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Join thousands of homeowners and businesses who have made the smart switch to clean, 
+              renewable solar energy and are saving money while protecting the environment.
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <Card 
-              key={index} 
-              className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:scale-105"
-            >
-              <CardContent className="p-6">
-                <div className={`w-12 h-12 bg-gradient-to-r ${benefit.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <benefit.icon className="h-6 w-6 text-white" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <Card 
+                key={index} 
+                className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm hover:scale-105 hover:-translate-y-2"
+              >
+                <CardContent className="p-8">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <benefit.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Our Solar Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive solar energy services tailored to your specific needs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <service.icon className="h-10 w-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {benefit.title}
+                  {service.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
+                  {service.description}
                 </p>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* Environmental Impact Stats */}
-        <div className="mt-16 bg-white rounded-2xl p-8 shadow-xl">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-            Environmental Impact of Solar Energy
-          </h3>
-          <div className="grid md:grid-cols-4 gap-6 text-center">
+      {/* Environmental Impact Stats */}
+      <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">Our Environmental Impact</h3>
+            <p className="text-xl text-green-100">Making a difference for our planet, one installation at a time</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-green-600">1.2 tons</div>
-              <div className="text-sm text-gray-600">CO₂ saved per year<br />per kW installed</div>
+              <div className="text-4xl font-bold text-yellow-300">2,500 tons</div>
+              <div className="text-green-100">CO₂ Emissions Prevented</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-blue-600">30 years</div>
-              <div className="text-sm text-gray-600">Average lifespan<br />of solar panels</div>
+              <div className="text-4xl font-bold text-yellow-300">15 MW</div>
+              <div className="text-green-100">Total Solar Capacity</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-purple-600">25%</div>
-              <div className="text-sm text-gray-600">Efficiency of<br />modern panels</div>
+              <div className="text-4xl font-bold text-yellow-300">500+</div>
+              <div className="text-green-100">Happy Customers</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-orange-600">2-5 years</div>
-              <div className="text-sm text-gray-600">Energy payback<br />time</div>
+              <div className="text-4xl font-bold text-yellow-300">$2M+</div>
+              <div className="text-green-100">Customer Savings</div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
