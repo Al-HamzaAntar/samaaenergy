@@ -28,7 +28,7 @@ const HeroSection = () => {
             <div className="space-y-6">
               <div className="flex items-center gap-2 text-yellow-400 font-semibold text-sm uppercase tracking-wider">
                 <Sun className="h-5 w-5" />
-                <span>Solar Energy Solutions</span>
+                <span>Sama Energy Solutions</span>
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
@@ -58,16 +58,16 @@ const HeroSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/20">
               <div>
-                <div className="text-3xl font-bold text-yellow-400">500+</div>
+                <div className="text-3xl font-bold text-yellow-400">987</div>
                 <div className="text-sm text-gray-300">Projects Completed</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-yellow-400">15MW+</div>
-                <div className="text-sm text-gray-300">Total Capacity</div>
+                <div className="text-3xl font-bold text-yellow-400">67.8k</div>
+                <div className="text-sm text-gray-300">kWh Energy Saved</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-yellow-400">98%</div>
-                <div className="text-sm text-gray-300">Customer Satisfaction</div>
+                <div className="text-3xl font-bold text-yellow-400">3,400</div>
+                <div className="text-sm text-gray-300">Team Members</div>
               </div>
             </div>
           </div>

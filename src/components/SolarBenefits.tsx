@@ -9,7 +9,9 @@ import {
   Award,
   Users,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Battery,
+  Settings
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -144,30 +146,42 @@ const SolarBenefits = () => {
         </div>
       </section>
 
-      {/* Environmental Impact Stats */}
-      <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      {/* Our Achievements Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Our Environmental Impact</h3>
-            <p className="text-xl text-green-100">Making a difference for our planet, one installation at a time</p>
+            <h3 className="text-3xl font-bold mb-4">Our Achievements</h3>
+            <p className="text-xl text-blue-100">Delivering excellence in solar energy solutions</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-yellow-300">2,500 tons</div>
-              <div className="text-green-100">CO₂ Emissions Prevented</div>
+              <div className="flex items-center justify-center mb-3">
+                <Battery className="h-8 w-8 text-yellow-300" />
+              </div>
+              <div className="text-4xl font-bold text-yellow-300">67,800</div>
+              <div className="text-blue-100">Energy Saving (kWh)</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-yellow-300">15 MW</div>
-              <div className="text-green-100">Total Solar Capacity</div>
+              <div className="flex items-center justify-center mb-3">
+                <Settings className="h-8 w-8 text-yellow-300" />
+              </div>
+              <div className="text-4xl font-bold text-yellow-300">468</div>
+              <div className="text-blue-100">Operating Production Lines</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-yellow-300">500+</div>
-              <div className="text-green-100">Happy Customers</div>
+              <div className="flex items-center justify-center mb-3">
+                <CheckCircle className="h-8 w-8 text-yellow-300" />
+              </div>
+              <div className="text-4xl font-bold text-yellow-300">987</div>
+              <div className="text-blue-100">Successful Projects</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-yellow-300">$2M+</div>
-              <div className="text-green-100">Customer Savings</div>
+              <div className="flex items-center justify-center mb-3">
+                <Users className="h-8 w-8 text-yellow-300" />
+              </div>
+              <div className="text-4xl font-bold text-yellow-300">3,400</div>
+              <div className="text-blue-100">Working Hands</div>
             </div>
           </div>
         </div>
