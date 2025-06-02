@@ -252,7 +252,7 @@ const Index = () => {
                   <Phone className="mr-2 h-5 w-5" />
                   Call for Free Quote
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+                <Button size="lg" variant="outline" className="border-2 border-white/30 text-white bg-transparent hover:bg-white/10 font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                   <Mail className="mr-2 h-5 w-5" />
                   Email Consultation
                 </Button>
