@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail, Target, Eye, Users, Quote, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,10 +24,10 @@ const Index = () => {
         <section className="py-20 px-4 bg-white" id="customers">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
                 Our Customers
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-blue-700 max-w-3xl mx-auto">
                 Trusted by leading organizations worldwide
               </p>
             </div>
@@ -35,49 +36,49 @@ const Index = () => {
               <Carousel className="w-full">
                 <CarouselContent>
                   <CarouselItem className="md:basis-1/2 lg:basis-1/4">
-                    <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                       <CardContent className="p-8 text-center">
-                        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                           <Users className="h-8 w-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900">WFP</h3>
-                        <p className="text-blue-600 font-semibold mt-2">World Food Programme</p>
+                        <h3 className="text-2xl font-bold text-blue-900">WFP</h3>
+                        <p className="text-green-600 font-semibold mt-2">World Food Programme</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                   
                   <CarouselItem className="md:basis-1/2 lg:basis-1/4">
-                    <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                       <CardContent className="p-8 text-center">
-                        <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                           <Users className="h-8 w-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900">UNICEF</h3>
+                        <h3 className="text-2xl font-bold text-blue-900">UNICEF</h3>
                         <p className="text-green-600 font-semibold mt-2">United Nations Children's Fund</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                   
                   <CarouselItem className="md:basis-1/2 lg:basis-1/4">
-                    <Card className="bg-gradient-to-br from-yellow-50 to-orange-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                       <CardContent className="p-8 text-center">
-                        <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                           <Users className="h-8 w-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900">WHO</h3>
-                        <p className="text-yellow-600 font-semibold mt-2">World Health Organization</p>
+                        <h3 className="text-2xl font-bold text-blue-900">WHO</h3>
+                        <p className="text-green-600 font-semibold mt-2">World Health Organization</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                   
                   <CarouselItem className="md:basis-1/2 lg:basis-1/4">
-                    <Card className="bg-gradient-to-br from-purple-50 to-pink-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                       <CardContent className="p-8 text-center">
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                           <Users className="h-8 w-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900">SAVE THE CHILDREN</h3>
-                        <p className="text-purple-600 font-semibold mt-2">International Organization</p>
+                        <h3 className="text-2xl font-bold text-blue-900">SAVE THE CHILDREN</h3>
+                        <p className="text-green-600 font-semibold mt-2">International Organization</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
@@ -92,13 +93,13 @@ const Index = () => {
         <SolarBenefits />
 
         {/* Our Ambitions Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50" id="ambitions">
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-green-50" id="ambitions">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
                 Our Ambitions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-blue-700 max-w-3xl mx-auto">
                 Leading the way towards a sustainable and energy-efficient future
               </p>
             </div>
@@ -106,11 +107,11 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Target className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Message</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4">Our Message</h3>
+                  <p className="text-blue-700 leading-relaxed">
                     To make the built environment a leading example of energy efficiency in the region and the world.
                   </p>
                 </CardContent>
@@ -118,11 +119,11 @@ const Index = () => {
 
               <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Eye className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4">Our Vision</h3>
+                  <p className="text-blue-700 leading-relaxed">
                     To make Yemen one of the most sustainable cities in the world
                   </p>
                 </CardContent>
@@ -130,11 +131,11 @@ const Index = () => {
 
               <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Users className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Objectives</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4">Objectives</h3>
+                  <p className="text-blue-700 leading-relaxed">
                     Establishment of a contracting market for the implementation of energy works, services and production lines in Yemen
                   </p>
                 </CardContent>
@@ -147,56 +148,56 @@ const Index = () => {
         <section className="py-20 px-4 bg-white" id="reviews">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
                 Customer Reviews
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-blue-700 max-w-3xl mx-auto">
                 What our clients say about our solar energy solutions
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-gradient-to-br from-blue-50 to-indigo-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center justify-center mb-6">
                     <Quote className="h-12 w-12 text-blue-600" />
                   </div>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                  <p className="text-blue-800 text-lg leading-relaxed mb-6 italic">
                     "Here the opinion is placed"
                   </p>
                   <div className="text-center">
-                    <h4 className="text-xl font-bold text-gray-900">Mohammed</h4>
-                    <p className="text-blue-600 font-semibold">UNICEF</p>
+                    <h4 className="text-xl font-bold text-blue-900">Mohammed</h4>
+                    <p className="text-green-600 font-semibold">UNICEF</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center justify-center mb-6">
                     <Quote className="h-12 w-12 text-green-600" />
                   </div>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                  <p className="text-blue-800 text-lg leading-relaxed mb-6 italic">
                     "Here the opinion is placed"
                   </p>
                   <div className="text-center">
-                    <h4 className="text-xl font-bold text-gray-900">Ahmed</h4>
+                    <h4 className="text-xl font-bold text-blue-900">Ahmed</h4>
                     <p className="text-green-600 font-semibold">Al Rabi Energy Systems</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-yellow-50 to-orange-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center justify-center mb-6">
-                    <Quote className="h-12 w-12 text-yellow-600" />
+                    <Quote className="h-12 w-12 text-blue-600" />
                   </div>
-                  <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                  <p className="text-blue-800 text-lg leading-relaxed mb-6 italic">
                     "Here the opinion is placed"
                   </p>
                   <div className="text-center">
-                    <h4 className="text-xl font-bold text-gray-900">Ali</h4>
-                    <p className="text-yellow-600 font-semibold">FAO</p>
+                    <h4 className="text-xl font-bold text-blue-900">Ali</h4>
+                    <p className="text-green-600 font-semibold">FAO</p>
                   </div>
                 </CardContent>
               </Card>
@@ -205,13 +206,13 @@ const Index = () => {
         </section>
 
         {/* Contact Us Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-900 to-blue-900 text-white" id="contact">
+        <section className="py-20 px-4 bg-gradient-to-r from-blue-900 to-green-800 text-white" id="contact">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">
                 Contact Us
               </h2>
-              <h3 className="text-2xl font-semibold text-gray-300 mb-8">
+              <h3 className="text-2xl font-semibold text-blue-200 mb-8">
                 Let's stay in touch
               </h3>
             </div>
@@ -219,13 +220,13 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Contact Information */}
               <div className="space-y-8">
-                <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+                <Card className="bg-white/10 border-green-400/20 backdrop-blur-sm">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4 mb-6">
-                      <MapPin className="h-6 w-6 text-yellow-400 mt-1" />
+                      <MapPin className="h-6 w-6 text-green-400 mt-1" />
                       <div>
                         <h4 className="text-xl font-semibold text-white mb-2">Our Location</h4>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-blue-200 leading-relaxed">
                           Yemen - Sana'a - Al-Asbahi City - Forty Street<br />
                           In front of the Royal Brewster Restaurant
                         </p>
@@ -233,30 +234,30 @@ const Index = () => {
                     </div>
                     
                     <div className="flex items-start gap-4 mb-6">
-                      <Mail className="h-6 w-6 text-yellow-400 mt-1" />
+                      <Mail className="h-6 w-6 text-green-400 mt-1" />
                       <div>
                         <h4 className="text-xl font-semibold text-white mb-2">Email Us</h4>
-                        <p className="text-gray-300">info@samaaenergy.com</p>
-                        <p className="text-gray-300">hossam@samaaenergy.com</p>
+                        <p className="text-blue-200">info@samaaenergy.com</p>
+                        <p className="text-blue-200">hossam@samaaenergy.com</p>
                       </div>
                     </div>
                     
                     <div className="flex items-start gap-4">
-                      <Phone className="h-6 w-6 text-yellow-400 mt-1" />
+                      <Phone className="h-6 w-6 text-green-400 mt-1" />
                       <div>
                         <h4 className="text-xl font-semibold text-white mb-2">Call Us</h4>
-                        <p className="text-gray-300">00967777754100</p>
+                        <p className="text-blue-200">00967777754100</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold px-8 py-4 text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
+                  <Button size="lg" className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-semibold px-8 py-4 text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
                     <Phone className="mr-2 h-5 w-5" />
                     Call for Free Quote
                   </Button>
-                  <Button size="lg" variant="outline" className="border-2 border-white/30 text-white bg-transparent hover:bg-white/10 font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+                  <Button size="lg" variant="outline" className="border-2 border-green-400/50 text-white bg-transparent hover:bg-green-400/10 font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                     <Mail className="mr-2 h-5 w-5" />
                     Email Consultation
                   </Button>
@@ -265,7 +266,7 @@ const Index = () => {
 
               {/* Google Maps */}
               <div className="relative">
-                <Card className="bg-white/10 border-white/20 backdrop-blur-sm overflow-hidden">
+                <Card className="bg-white/10 border-green-400/20 backdrop-blur-sm overflow-hidden">
                   <CardContent className="p-0">
                     <div className="relative h-96 w-full">
                       <iframe

@@ -27,13 +27,13 @@ const SolarBenefits = () => {
   return (
     <>
       {/* About Us Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-green-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
               About Us
             </h2>
-            <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-600 leading-relaxed">
+            <div className="max-w-4xl mx-auto space-y-6 text-lg text-blue-700 leading-relaxed">
               <p>
                 Sama Energy is made up of a group of professionals with experience in the energy sector working to assist businesses and businesses across the region to secure the most cost-efficient use of their facilities.
               </p>
@@ -52,25 +52,25 @@ const SolarBenefits = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
               Our Solar Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto">
               Comprehensive energy and production line services tailored to your specific needs
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Renewable Energy Services */}
-            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-blue-50 to-indigo-50 hover:scale-105">
+            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-blue-50 to-green-50 hover:scale-105">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Zap className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                <h3 className="text-2xl font-bold text-blue-900 mb-6">
                   Renewable Energy Services
                 </h3>
-                <div className="space-y-4 text-gray-600 leading-relaxed">
+                <div className="space-y-4 text-blue-700 leading-relaxed">
                   <p>
                     Sama Energy offers energy solutions to serve you through its extensive experience in the fields of engineering, procurement, construction (EPC), and operation and maintenance in relation to solar energy, wind energy and water pumps.
                   </p>
@@ -91,15 +91,15 @@ const SolarBenefits = () => {
             </Card>
 
             {/* Production Line Services */}
-            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-green-50 to-emerald-50 hover:scale-105">
+            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-green-50 to-blue-50 hover:scale-105">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Settings className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                <h3 className="text-2xl font-bold text-blue-900 mb-6">
                   Production Line Services
                 </h3>
-                <div className="space-y-4 text-gray-600 leading-relaxed">
+                <div className="space-y-4 text-blue-700 leading-relaxed">
                   <p>
                     Sama Energy offers you a professional production line installation service thanks to our dedicated team in the sale, maintenance and installation of all used and new production lines.
                   </p>
@@ -123,7 +123,7 @@ const SolarBenefits = () => {
       </section>
 
       {/* Our Achievements Section with Animation */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-green-600 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Our Achievements</h3>
@@ -133,36 +133,36 @@ const SolarBenefits = () => {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div ref={energySaving.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
-                <Battery className="h-8 w-8 text-yellow-300" />
+                <Battery className="h-8 w-8 text-green-300" />
               </div>
-              <div className="text-4xl font-bold text-yellow-300 transition-all duration-300">
+              <div className="text-4xl font-bold text-green-300 transition-all duration-300">
                 {energySaving.count.toLocaleString()}
               </div>
               <div className="text-blue-100">Energy Saving (kWh)</div>
             </div>
             <div ref={productionLines.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
-                <Settings className="h-8 w-8 text-yellow-300" />
+                <Settings className="h-8 w-8 text-green-300" />
               </div>
-              <div className="text-4xl font-bold text-yellow-300 transition-all duration-300">
+              <div className="text-4xl font-bold text-green-300 transition-all duration-300">
                 {productionLines.count.toLocaleString()}
               </div>
               <div className="text-blue-100">Operating Production Lines</div>
             </div>
             <div ref={successfulProjects.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
-                <CheckCircle className="h-8 w-8 text-yellow-300" />
+                <CheckCircle className="h-8 w-8 text-green-300" />
               </div>
-              <div className="text-4xl font-bold text-yellow-300 transition-all duration-300">
+              <div className="text-4xl font-bold text-green-300 transition-all duration-300">
                 {successfulProjects.count.toLocaleString()}
               </div>
               <div className="text-blue-100">Successful Projects</div>
             </div>
             <div ref={workingHands.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
-                <Users className="h-8 w-8 text-yellow-300" />
+                <Users className="h-8 w-8 text-green-300" />
               </div>
-              <div className="text-4xl font-bold text-yellow-300 transition-all duration-300">
+              <div className="text-4xl font-bold text-green-300 transition-all duration-300">
                 {workingHands.count.toLocaleString()}
               </div>
               <div className="text-blue-100">Working Hands</div>
