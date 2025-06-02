@@ -15,8 +15,15 @@ import {
   Wrench
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const SolarBenefits = () => {
+  // Count up hooks for each achievement metric
+  const energySaving = useCountUp({ end: 67800, duration: 2500 });
+  const productionLines = useCountUp({ end: 468, duration: 2000 });
+  const successfulProjects = useCountUp({ end: 987, duration: 2200 });
+  const workingHands = useCountUp({ end: 3400, duration: 2800 });
+
   return (
     <>
       {/* About Us Section */}
@@ -115,7 +122,7 @@ const SolarBenefits = () => {
         </div>
       </section>
 
-      {/* Our Achievements Section */}
+      {/* Our Achievements Section with Animation */}
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -124,32 +131,40 @@ const SolarBenefits = () => {
           </div>
           
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div className="space-y-2">
+            <div ref={energySaving.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
                 <Battery className="h-8 w-8 text-yellow-300" />
               </div>
-              <div className="text-4xl font-bold text-yellow-300">67,800</div>
+              <div className="text-4xl font-bold text-yellow-300 transition-all duration-300">
+                {energySaving.count.toLocaleString()}
+              </div>
               <div className="text-blue-100">Energy Saving (kWh)</div>
             </div>
-            <div className="space-y-2">
+            <div ref={productionLines.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
                 <Settings className="h-8 w-8 text-yellow-300" />
               </div>
-              <div className="text-4xl font-bold text-yellow-300">468</div>
+              <div className="text-4xl font-bold text-yellow-300 transition-all duration-300">
+                {productionLines.count.toLocaleString()}
+              </div>
               <div className="text-blue-100">Operating Production Lines</div>
             </div>
-            <div className="space-y-2">
+            <div ref={successfulProjects.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
                 <CheckCircle className="h-8 w-8 text-yellow-300" />
               </div>
-              <div className="text-4xl font-bold text-yellow-300">987</div>
+              <div className="text-4xl font-bold text-yellow-300 transition-all duration-300">
+                {successfulProjects.count.toLocaleString()}
+              </div>
               <div className="text-blue-100">Successful Projects</div>
             </div>
-            <div className="space-y-2">
+            <div ref={workingHands.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
                 <Users className="h-8 w-8 text-yellow-300" />
               </div>
-              <div className="text-4xl font-bold text-yellow-300">3,400</div>
+              <div className="text-4xl font-bold text-yellow-300 transition-all duration-300">
+                {workingHands.count.toLocaleString()}
+              </div>
               <div className="text-blue-100">Working Hands</div>
             </div>
           </div>
