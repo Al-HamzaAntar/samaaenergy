@@ -1,7 +1,13 @@
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,9 +15,15 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", href: "#" },
     { name: "Our Services", href: "#services" },
-    { name: "Sectors", href: "#sectors" },
     { name: "Training", href: "#training" },
     { name: "Careers", href: "#careers" },
+  ];
+
+  const sectorItems = [
+    "Trade Sector",
+    "Consulting and Services Sector", 
+    "Factory Installation Sector",
+    "Training and Employment Sector"
   ];
 
   const toggleMenu = () => {
@@ -49,6 +61,27 @@ const Navbar = () => {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
                 </a>
               ))}
+              
+              {/* Sectors Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="text-blue-900 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-300 relative group flex items-center gap-1">
+                    Sectors
+                    <ChevronDown className="h-4 w-4" />
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-white border border-blue-200 shadow-lg">
+                  {sectorItems.map((sector) => (
+                    <DropdownMenuItem 
+                      key={sector}
+                      className="text-blue-900 hover:text-green-600 hover:bg-blue-50 cursor-pointer"
+                    >
+                      {sector}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
 
@@ -87,6 +120,21 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            
+            {/* Mobile Sectors Menu */}
+            <div className="px-3 py-2">
+              <div className="text-blue-900 font-medium text-base mb-2">Sectors</div>
+              {sectorItems.map((sector) => (
+                <a
+                  key={sector}
+                  href="#"
+                  className="text-blue-700 hover:text-green-600 block px-3 py-1 text-sm transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {sector}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       )}
