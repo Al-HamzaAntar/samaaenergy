@@ -1,14 +1,7 @@
 
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,15 +9,9 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", href: "#" },
     { name: "Our Services", href: "#services" },
+    { name: "Sectors", href: "#sectors" },
     { name: "Training", href: "#training" },
     { name: "Careers", href: "#careers" },
-  ];
-
-  const sectorItems = [
-    { name: "Trade Sector", href: "#trade-sector" },
-    { name: "Consulting and Services Sector", href: "#consulting-sector" },
-    { name: "Factory Installation Sector", href: "#factory-sector" },
-    { name: "Training and Employment Sector", href: "#training-sector" },
   ];
 
   const toggleMenu = () => {
@@ -50,43 +37,19 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <NavigationMenu>
-              <NavigationMenuList className="flex items-baseline space-x-8">
-                {navItems.map((item) => (
-                  <NavigationMenuItem key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-blue-900 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-300 relative group"
-                      onClick={item.name === "Home" ? scrollToTop : undefined}
-                    >
-                      {item.name}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                  </NavigationMenuItem>
-                ))}
-                
-                {/* Sectors Dropdown */}
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-blue-900 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-300 relative group bg-transparent border-none shadow-none">
-                    Sectors
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-white border border-blue-200 shadow-lg rounded-lg p-2 min-w-[280px]">
-                    <div className="space-y-1">
-                      {sectorItems.map((sector) => (
-                        <a
-                          key={sector.name}
-                          href={sector.href}
-                          className="block px-4 py-2 text-sm text-blue-900 hover:text-green-600 hover:bg-blue-50 rounded-md transition-colors duration-200"
-                        >
-                          {sector.name}
-                        </a>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+            <div className="ml-10 flex items-baseline space-x-8">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-blue-900 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-300 relative group"
+                  onClick={item.name === "Home" ? scrollToTop : undefined}
+                >
+                  {item.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -124,23 +87,6 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            
-            {/* Mobile Sectors */}
-            <div className="space-y-1">
-              <div className="text-blue-900 px-3 py-2 text-base font-medium">
-                Sectors
-              </div>
-              {sectorItems.map((sector) => (
-                <a
-                  key={sector.name}
-                  href={sector.href}
-                  className="text-blue-700 hover:text-green-600 block px-6 py-2 text-sm transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {sector.name}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       )}
