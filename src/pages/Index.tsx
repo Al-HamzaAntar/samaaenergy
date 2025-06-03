@@ -1,4 +1,5 @@
 
+
 import { useState } from "react";
 import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail, Target, Eye, Users, Quote, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -271,14 +272,14 @@ const Index = () => {
                   <CardContent className="p-0">
                     <div className="relative h-96 w-full">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.2263734559883!2d44.21873757597926!3d15.370943050777744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603d99834c6e4bb%3A0x7f6e7a1a7f7a7a7a!2s76PC%2BF54%20%D9%85%D8%B7%D8%A7%D8%B9%D9%85%20%D8%B1%D9%88%D9%8A%D8%A7%D9%84%20%D8%A8%D8%B1%D9%88%D8%B3%D8%AA%D8%B1%D8%8C%20%D9%85%D8%AB%D9%84%D8%AB%20%D8%A8%D9%8A%D8%AA%20%D8%A8%D9%88%D8%B3%D8%8C%20%D8%B5%D9%86%D8%B9%D8%A7%D8%A1%E2%80%8E%D8%8C%20%D8%A7%D9%84%D9%8A%D9%8E%D9%85%D9%8E%D9%86%D8%8C%20%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%A7%D9%84%D8%A3%D8%B1%D8%A8%D8%B9%D9%8A%D9%86%D8%8C%20%D8%A3%D9%85%D8%A7%D9%85%D8%8C%20%D8%B5%D9%86%D8%B9%D8%A7%D8%A1%E2%80%8E%D8%8C%20%D8%A7%D9%84%D9%8A%D9%85%D9%86!5e0!3m2!1sen!2s!4v1"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3522.9466050941937!2d44.2233161!3d15.2851632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603c5609c2b3759%3A0x2f1dca8e724fcfe7!2z2LPYp9mF2Kcg2KXZhtix2KzZiiAtIFNBTUEgRU5FUkdZ!5e1!3m2!1sar!2s!4v1748963101070!5m2!1sar!2s"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
                         allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="Sama Energy Location - Royal Brewster Restaurant, Sana'a, Yemen"
+                        title="SAMA ENERGY Location - Sana'a, Yemen"
                       ></iframe>
                     </div>
                   </CardContent>
@@ -299,3 +300,4 @@ const Index = () => {
 };
 
 export default Index;
+
