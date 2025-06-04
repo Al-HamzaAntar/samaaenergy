@@ -63,6 +63,7 @@ const Careers = () => {
   };
 
   const specializations = [
+    "Accountant",
     "Internal Auditor",
     "Legal Advisor",
     "Business Correspondent",
@@ -208,7 +209,7 @@ const Careers = () => {
                           type="file"
                           accept=".pdf,.doc,.docx"
                           className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="Choose a file or browse your files"
+                          placeholder="No file chosen"
                           onChange={(e) => field.onChange(e.target.files?.[0]?.name || "")}
                         />
                       </FormControl>
