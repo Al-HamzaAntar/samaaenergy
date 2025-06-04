@@ -34,7 +34,11 @@ const SolarBenefits = () => {
             <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
               About Us
             </h2>
-            <div className="max-w-4xl mx-auto space-y-6 text-lg text-blue-700 leading-relaxed">
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="space-y-6 text-lg text-blue-700 leading-relaxed">
               <p>
                 Sama Energy is made up of a group of professionals with experience in the energy sector working to assist businesses and businesses across the region to secure the most cost-efficient use of their facilities.
               </p>
@@ -44,6 +48,18 @@ const SolarBenefits = () => {
               <p>
                 Thanks to our extensive experience and basic expertise, Sama Energy can obtain the largest range of customized solutions for your business and facilities, and we have a range of services for clients that help them grow.
               </p>
+            </div>
+            
+            {/* Modern Office Image */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/lovable-uploads/76054777-365b-45cc-af68-0bd7e26e8fea.png"
+                  alt="Sama Energy Modern Office"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>

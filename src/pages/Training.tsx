@@ -14,10 +14,10 @@ import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const formSchema = z.object({
-  name: z.string().min(2, "الاسم يجب أن يكون أكثر من حرفين"),
-  email: z.string().email("يرجى إدخال بريد إلكتروني صحيح"),
-  phone: z.string().min(9, "رقم الهاتف يجب أن يكون أكثر من 9 أرقام"),
-  course: z.string().min(1, "يرجى اختيار الدورة"),
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email"),
+  phone: z.string().min(9, "Phone number must be at least 9 digits"),
+  course: z.string().min(1, "Please select a course"),
   additionalInfo: z.string().optional(),
 });
 
@@ -44,15 +44,15 @@ const Training = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
-        title: "تم إرسال الطلب بنجاح",
-        description: "سيتم التواصل معك قريباً لتأكيد التسجيل",
+        title: "Application Submitted Successfully",
+        description: "We will contact you soon to confirm your registration",
       });
       
       form.reset();
     } catch (error) {
       toast({
-        title: "حدث خطأ",
-        description: "يرجى المحاولة مرة أخرى",
+        title: "Error Occurred",
+        description: "Please try again",
         variant: "destructive",
       });
     } finally {
@@ -61,11 +61,11 @@ const Training = () => {
   };
 
   const courses = [
-    "الطاقة الشمسية الأساسية",
-    "تركيب الأنظمة الشمسية",
-    "صيانة الطاقة المتجددة",
-    "إدارة مشاريع الطاقة",
-    "التصميم الهندسي للأنظمة الشمسية",
+    "Basic Solar Energy",
+    "Solar System Installation",
+    "Renewable Energy Maintenance",
+    "Energy Project Management",
+    "Solar System Engineering Design",
   ];
 
   return (
@@ -77,10 +77,10 @@ const Training = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-blue-900 mb-4">
-              استمارة التدريب
+              Training Application Form
             </h1>
             <p className="text-lg text-blue-700 max-w-2xl mx-auto">
-              يمكنك التقدم كمتدرب في إحدى الدورات المتاحة عبر ملء الاستمارة وسيتم التواصل معك
+              Apply as a trainee in one of our available courses by filling out the form and we will contact you
             </p>
           </div>
 
@@ -95,18 +95,17 @@ const Training = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-blue-900 font-semibold text-right block">
-                          اسمك
+                        <FormLabel className="text-blue-900 font-semibold">
+                          Your Name
                         </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
-                            className="text-right border-blue-200 focus:border-blue-500 focus:ring-blue-500"
-                            placeholder="أدخل اسمك الكامل"
-                            dir="rtl"
+                            className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="Enter your full name"
                           />
                         </FormControl>
-                        <FormMessage className="text-right" />
+                        <FormMessage />
                       </FormItem>
                     )}
                   />
@@ -116,8 +115,8 @@ const Training = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-blue-900 font-semibold text-right block">
-                          بريدك الإلكتروني
+                        <FormLabel className="text-blue-900 font-semibold">
+                          Your Email
                         </FormLabel>
                         <FormControl>
                           <Input
@@ -127,7 +126,7 @@ const Training = () => {
                             placeholder="example@email.com"
                           />
                         </FormControl>
-                        <FormMessage className="text-right" />
+                        <FormMessage />
                       </FormItem>
                     )}
                   />
@@ -139,19 +138,18 @@ const Training = () => {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-blue-900 font-semibold text-right block">
-                        رقم الجوال
+                      <FormLabel className="text-blue-900 font-semibold">
+                        Phone Number
                       </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           type="tel"
-                          className="text-right border-blue-200 focus:border-blue-500 focus:ring-blue-500"
+                          className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
                           placeholder="9xxxxxxxx"
-                          dir="rtl"
                         />
                       </FormControl>
-                      <FormMessage className="text-right" />
+                      <FormMessage />
                     </FormItem>
                   )}
                 />
@@ -162,24 +160,24 @@ const Training = () => {
                   name="course"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-blue-900 font-semibold text-right block">
-                        اختيار الدورة
+                      <FormLabel className="text-blue-900 font-semibold">
+                        Select Course
                       </FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="text-right border-blue-200 focus:border-blue-500 focus:ring-blue-500">
-                            <SelectValue placeholder="قريباً" />
+                          <SelectTrigger className="border-blue-200 focus:border-blue-500 focus:ring-blue-500">
+                            <SelectValue placeholder="Coming Soon" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
                           {courses.map((course) => (
-                            <SelectItem key={course} value={course} className="text-right">
+                            <SelectItem key={course} value={course}>
                               {course}
                             </SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
-                      <FormMessage className="text-right" />
+                      <FormMessage />
                     </FormItem>
                   )}
                 />
@@ -190,18 +188,17 @@ const Training = () => {
                   name="additionalInfo"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-blue-900 font-semibold text-right block">
-                        معلومات أخرى
+                      <FormLabel className="text-blue-900 font-semibold">
+                        Additional Information
                       </FormLabel>
                       <FormControl>
                         <Textarea
                           {...field}
-                          className="text-right border-blue-200 focus:border-blue-500 focus:ring-blue-500 min-h-[120px]"
-                          placeholder="أضف أي معلومات إضافية تود مشاركتها..."
-                          dir="rtl"
+                          className="border-blue-200 focus:border-blue-500 focus:ring-blue-500 min-h-[120px]"
+                          placeholder="Add any additional information you would like to share..."
                         />
                       </FormControl>
-                      <FormMessage className="text-right" />
+                      <FormMessage />
                     </FormItem>
                   )}
                 />
@@ -213,7 +210,7 @@ const Training = () => {
                     disabled={isSubmitting}
                     className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-12 py-3 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    {isSubmitting ? "جاري الإرسال..." : "ارسال"}
+                    {isSubmitting ? "Submitting..." : "Submit"}
                   </Button>
                 </div>
               </form>
@@ -224,29 +221,29 @@ const Training = () => {
           <div className="mt-12 text-center">
             <div className="bg-gradient-to-r from-blue-100 to-green-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-blue-900 mb-4">
-                لماذا تختار برامج التدريب لدينا؟
+                Why Choose Our Training Programs?
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white text-2xl">🎓</span>
                   </div>
-                  <h4 className="font-semibold text-blue-900 mb-2">خبراء مختصون</h4>
-                  <p className="text-blue-700 text-sm">تدريب على أيدي خبراء في مجال الطاقة المتجددة</p>
+                  <h4 className="font-semibold text-blue-900 mb-2">Expert Instructors</h4>
+                  <p className="text-blue-700 text-sm">Training by experts in the renewable energy field</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white text-2xl">🔧</span>
                   </div>
-                  <h4 className="font-semibold text-blue-900 mb-2">تدريب عملي</h4>
-                  <p className="text-blue-700 text-sm">تطبيق عملي على أحدث التقنيات والمعدات</p>
+                  <h4 className="font-semibold text-blue-900 mb-2">Hands-on Training</h4>
+                  <p className="text-blue-700 text-sm">Practical application on the latest technologies and equipment</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white text-2xl">📋</span>
                   </div>
-                  <h4 className="font-semibold text-blue-900 mb-2">شهادة معتمدة</h4>
-                  <p className="text-blue-700 text-sm">الحصول على شهادة معتمدة بعد إنهاء التدريب</p>
+                  <h4 className="font-semibold text-blue-900 mb-2">Certified Certificate</h4>
+                  <p className="text-blue-700 text-sm">Receive a certified certificate after completing the training</p>
                 </div>
               </div>
             </div>
