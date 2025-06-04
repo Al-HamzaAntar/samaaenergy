@@ -16,7 +16,7 @@ const Navbar = () => {
     { name: "Home", href: "/", isRoute: true },
     { name: "Our Services", href: "/services", isRoute: true },
     { name: "Training", href: "/training", isRoute: true },
-    { name: "Careers", href: "#careers", isRoute: false },
+    { name: "Careers", href: "/careers", isRoute: true },
   ];
 
   const sectorItems = [
