@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,7 +15,7 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", href: "/", isRoute: true },
     { name: "Our Services", href: "/services", isRoute: true },
-    { name: "Training", href: "#training", isRoute: false },
+    { name: "Training", href: "/training", isRoute: true },
     { name: "Careers", href: "#careers", isRoute: false },
   ];
 
