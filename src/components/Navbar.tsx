@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,10 +14,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "Our Services", href: "#services" },
-    { name: "Training", href: "#training" },
-    { name: "Careers", href: "#careers" },
+    { name: "Home", href: "/", isRoute: true },
+    { name: "Our Services", href: "/services", isRoute: true },
+    { name: "Training", href: "#training", isRoute: false },
+    { name: "Careers", href: "#careers", isRoute: false },
   ];
 
   const sectorItems = [
@@ -40,26 +41,38 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 cursor-pointer" onClick={scrollToTop}>
-            <img
-              src="/lovable-uploads/818e18cf-a403-4072-83d4-7840a3e6426d.png"
-              alt="Sama Energy"
-              className="h-12 w-auto"
-            />
+            <Link to="/">
+              <img
+                src="/lovable-uploads/818e18cf-a403-4072-83d4-7840a3e6426d.png"
+                alt="Sama Energy"
+                className="h-12 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-blue-900 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-300 relative group"
-                  onClick={item.name === "Home" ? scrollToTop : undefined}
-                >
-                  {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
-                </a>
+                item.isRoute ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-blue-900 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-300 relative group"
+                  >
+                    {item.name}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-blue-900 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-300 relative group"
+                  >
+                    {item.name}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
+                  </a>
+                )
               ))}
               
               {/* Sectors Dropdown */}
@@ -108,17 +121,25 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-blue-200">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-blue-900 hover:text-green-600 block px-3 py-2 text-base font-medium transition-colors duration-300"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  if (item.name === "Home") scrollToTop();
-                }}
-              >
-                {item.name}
-              </a>
+              item.isRoute ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-blue-900 hover:text-green-600 block px-3 py-2 text-base font-medium transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-blue-900 hover:text-green-600 block px-3 py-2 text-base font-medium transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              )
             ))}
             
             {/* Mobile Sectors Menu */}
