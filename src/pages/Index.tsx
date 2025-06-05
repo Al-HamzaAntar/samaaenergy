@@ -1,5 +1,4 @@
 
-
 import { useState } from "react";
 import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail, Target, Eye, Users, Quote, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useLanguage } from "@/contexts/LanguageContext";
 import SolarBenefits from "@/components/SolarBenefits";
 import HeroSection from "@/components/HeroSection";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
@@ -14,6 +14,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -27,7 +29,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
-                Our Customers
+                {t('common.customers')}
               </h2>
               <p className="text-xl text-blue-700 max-w-3xl mx-auto">
                 Trusted by leading organizations worldwide
@@ -99,7 +101,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
-                Our Ambitions
+                {t('common.ambitions')}
               </h2>
               <p className="text-xl text-blue-700 max-w-3xl mx-auto">
                 Leading the way towards a sustainable and energy-efficient future
@@ -112,7 +114,7 @@ const Index = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Target className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-blue-900 mb-4">Our Message</h3>
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4">{t('common.message')}</h3>
                   <p className="text-blue-700 leading-relaxed">
                     To make the built environment a leading example of energy efficiency in the region and the world.
                   </p>
@@ -124,7 +126,7 @@ const Index = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Eye className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-blue-900 mb-4">Our Vision</h3>
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4">{t('common.vision')}</h3>
                   <p className="text-blue-700 leading-relaxed">
                     To make Yemen one of the most sustainable cities in the world
                   </p>
@@ -136,7 +138,7 @@ const Index = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Users className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-blue-900 mb-4">Objectives</h3>
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4">{t('common.objectives')}</h3>
                   <p className="text-blue-700 leading-relaxed">
                     Establishment of a contracting market for the implementation of energy works, services and production lines in Yemen
                   </p>
@@ -151,7 +153,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
-                Customer Reviews
+                {t('common.reviews')}
               </h2>
               <p className="text-xl text-blue-700 max-w-3xl mx-auto">
                 What our clients say about our solar energy solutions
@@ -212,10 +214,10 @@ const Index = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                Contact Us
+                {t('contact.title')}
               </h2>
               <h3 className="text-2xl font-semibold text-blue-200 mb-8">
-                Let's stay in touch
+                {t('contact.subtitle')}
               </h3>
             </div>
             
@@ -227,7 +229,7 @@ const Index = () => {
                     <div className="flex items-start gap-4 mb-6">
                       <MapPin className="h-6 w-6 text-green-400 mt-1" />
                       <div>
-                        <h4 className="text-xl font-semibold text-white mb-2">Our Location</h4>
+                        <h4 className="text-xl font-semibold text-white mb-2">{t('contact.location')}</h4>
                         <p className="text-blue-200 leading-relaxed">
                           Yemen - Sana'a - Al-Asbahi City - Forty Street<br />
                           In front of the Royal Brewster Restaurant
@@ -238,7 +240,7 @@ const Index = () => {
                     <div className="flex items-start gap-4 mb-6">
                       <Mail className="h-6 w-6 text-green-400 mt-1" />
                       <div>
-                        <h4 className="text-xl font-semibold text-white mb-2">Email Us</h4>
+                        <h4 className="text-xl font-semibold text-white mb-2">{t('contact.email')}</h4>
                         <p className="text-blue-200">info@samaaenergy.com</p>
                         <p className="text-blue-200">hossam@samaaenergy.com</p>
                       </div>
@@ -247,7 +249,7 @@ const Index = () => {
                     <div className="flex items-start gap-4">
                       <Phone className="h-6 w-6 text-green-400 mt-1" />
                       <div>
-                        <h4 className="text-xl font-semibold text-white mb-2">Call Us</h4>
+                        <h4 className="text-xl font-semibold text-white mb-2">{t('contact.phone')}</h4>
                         <p className="text-blue-200">00967777754100</p>
                       </div>
                     </div>
@@ -257,11 +259,11 @@ const Index = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-semibold px-8 py-4 text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
                     <Phone className="mr-2 h-5 w-5" />
-                    Call for Free Quote
+                    {t('contact.callQuote')}
                   </Button>
                   <Button size="lg" variant="outline" className="border-2 border-green-400/50 text-white bg-transparent hover:bg-green-400/10 font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                     <Mail className="mr-2 h-5 w-5" />
-                    Email Consultation
+                    {t('contact.emailConsultation')}
                   </Button>
                 </div>
               </div>
@@ -300,4 +302,3 @@ const Index = () => {
 };
 
 export default Index;
-

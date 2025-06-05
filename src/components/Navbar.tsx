@@ -1,7 +1,10 @@
+
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,12 +14,13 @@ import {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navItems = [
-    { name: "Home", href: "/", isRoute: true },
-    { name: "Our Services", href: "/services", isRoute: true },
-    { name: "Training", href: "/training", isRoute: true },
-    { name: "Careers", href: "/careers", isRoute: true },
+    { name: t('nav.home'), href: "/", isRoute: true },
+    { name: t('nav.services'), href: "/services", isRoute: true },
+    { name: t('nav.training'), href: "/training", isRoute: true },
+    { name: t('nav.careers'), href: "/careers", isRoute: true },
   ];
 
   const sectorItems = [
@@ -78,12 +82,12 @@ const Navbar = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button className="text-blue-900 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors duration-300 relative group flex items-center gap-1">
-                    Sectors
+                    {t('nav.sectors')}
                     <ChevronDown className="h-4 w-4" />
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-white border border-blue-200 shadow-lg">
+                <DropdownMenuContent className="bg-white border border-blue-200 shadow-lg z-50">
                   {sectorItems.map((sector) => (
                     <DropdownMenuItem 
                       key={sector}
@@ -94,11 +98,15 @@ const Navbar = () => {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
+
+              {/* Language Switcher */}
+              <LanguageSwitcher />
             </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSwitcher />
             <Button
               variant="ghost"
               size="icon"
@@ -143,7 +151,7 @@ const Navbar = () => {
             
             {/* Mobile Sectors Menu */}
             <div className="px-3 py-2">
-              <div className="text-blue-900 font-medium text-base mb-2">Sectors</div>
+              <div className="text-blue-900 font-medium text-base mb-2">{t('nav.sectors')}</div>
               {sectorItems.map((sector) => (
                 <a
                   key={sector}

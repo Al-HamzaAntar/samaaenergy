@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
@@ -26,6 +27,7 @@ type FormData = z.infer<typeof formSchema>;
 
 const Careers = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { t } = useLanguage();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -46,15 +48,15 @@ const Careers = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
-        title: "Application Submitted Successfully",
-        description: "We will review your application and contact you soon",
+        title: t('careers.success.title'),
+        description: t('careers.success.description'),
       });
       
       form.reset();
     } catch (error) {
       toast({
-        title: "Error Occurred",
-        description: "Please try again",
+        title: t('careers.error.title'),
+        description: t('careers.error.description'),
         variant: "destructive",
       });
     } finally {
@@ -86,10 +88,10 @@ const Careers = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-blue-900 mb-4">
-              Job Application
+              {t('careers.title')}
             </h1>
             <p className="text-lg text-blue-700 max-w-2xl mx-auto">
-              You can apply for a job and we will contact you
+              {t('careers.subtitle')}
             </p>
           </div>
 
@@ -105,13 +107,13 @@ const Careers = () => {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-blue-900 font-semibold">
-                          Name
+                          {t('careers.form.name')}
                         </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
-                            placeholder="Enter your full name"
+                            placeholder={t('careers.form.namePlaceholder')}
                           />
                         </FormControl>
                         <FormMessage />
@@ -125,14 +127,14 @@ const Careers = () => {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-blue-900 font-semibold">
-                          Email
+                          {t('careers.form.email')}
                         </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             type="email"
                             className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
-                            placeholder="example@email.com"
+                            placeholder={t('careers.form.emailPlaceholder')}
                           />
                         </FormControl>
                         <FormMessage />
@@ -148,14 +150,14 @@ const Careers = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-blue-900 font-semibold">
-                        Phone Number
+                        {t('careers.form.phone')}
                       </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           type="tel"
                           className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="9xxxxxxxx"
+                          placeholder={t('careers.form.phonePlaceholder')}
                         />
                       </FormControl>
                       <FormMessage />
@@ -170,7 +172,7 @@ const Careers = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-blue-900 font-semibold">
-                        Specialization
+                        {t('careers.form.specialization')}
                       </FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
@@ -202,14 +204,14 @@ const Careers = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-blue-900 font-semibold">
-                        Upload CV/Resume
+                        {t('careers.form.cv')}
                       </FormLabel>
                       <FormControl>
                         <Input
                           type="file"
                           accept=".pdf,.doc,.docx"
                           className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="Choose your CV file"
+                          placeholder={t('careers.form.cvPlaceholder')}
                           onChange={(e) => field.onChange(e.target.files?.[0]?.name || "")}
                         />
                       </FormControl>
@@ -225,13 +227,13 @@ const Careers = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-blue-900 font-semibold">
-                        Additional Information You Want to Mention
+                        {t('careers.form.additional')}
                       </FormLabel>
                       <FormControl>
                         <Textarea
                           {...field}
                           className="border-blue-200 focus:border-blue-500 focus:ring-blue-500 min-h-[120px]"
-                          placeholder="Add any additional information you would like to share..."
+                          placeholder={t('careers.form.additionalPlaceholder')}
                         />
                       </FormControl>
                       <FormMessage />
@@ -246,7 +248,7 @@ const Careers = () => {
                     disabled={isSubmitting}
                     className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-12 py-3 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    {isSubmitting ? "Submitting..." : "Submit"}
+                    {isSubmitting ? t('careers.form.submitting') : t('careers.form.submit')}
                   </Button>
                 </div>
               </form>
@@ -257,29 +259,29 @@ const Careers = () => {
           <div className="mt-12 text-center">
             <div className="bg-gradient-to-r from-blue-100 to-green-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-blue-900 mb-4">
-                Why Work With Us?
+                {t('careers.whyWorkWithUs')}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white text-2xl">🚀</span>
                   </div>
-                  <h4 className="font-semibold text-blue-900 mb-2">Growth Opportunities</h4>
-                  <p className="text-blue-700 text-sm">Join a growing company in the renewable energy sector</p>
+                  <h4 className="font-semibold text-blue-900 mb-2">{t('careers.growthOpportunities')}</h4>
+                  <p className="text-blue-700 text-sm">{t('careers.growthDesc')}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white text-2xl">🌱</span>
                   </div>
-                  <h4 className="font-semibold text-blue-900 mb-2">Sustainable Impact</h4>
-                  <p className="text-blue-700 text-sm">Make a positive impact on the environment and society</p>
+                  <h4 className="font-semibold text-blue-900 mb-2">{t('careers.sustainableImpact')}</h4>
+                  <p className="text-blue-700 text-sm">{t('careers.sustainableDesc')}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white text-2xl">👥</span>
                   </div>
-                  <h4 className="font-semibold text-blue-900 mb-2">Team Environment</h4>
-                  <p className="text-blue-700 text-sm">Work with a passionate and dedicated team</p>
+                  <h4 className="font-semibold text-blue-900 mb-2">{t('careers.teamEnvironment')}</h4>
+                  <p className="text-blue-700 text-sm">{t('careers.teamDesc')}</p>
                 </div>
               </div>
             </div>
