@@ -202,7 +202,7 @@ const Careers = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-blue-900 font-semibold">
-                        CV File
+                        Upload CV/Resume
                       </FormLabel>
                       <FormControl>
                         <Input
