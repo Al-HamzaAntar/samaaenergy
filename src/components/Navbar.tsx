@@ -24,10 +24,10 @@ const Navbar = () => {
   ];
 
   const sectorItems = [
-    "Trade Sector",
-    "Consulting and Services Sector", 
-    "Factory Installation Sector",
-    "Training and Employment Sector"
+    { name: t('sectors.trade'), key: 'trade' },
+    { name: t('sectors.consulting'), key: 'consulting' },
+    { name: t('sectors.factory'), key: 'factory' },
+    { name: t('sectors.training'), key: 'training' }
   ];
 
   const toggleMenu = () => {
@@ -90,10 +90,10 @@ const Navbar = () => {
                 <DropdownMenuContent className="bg-white border border-blue-200 shadow-lg z-50">
                   {sectorItems.map((sector) => (
                     <DropdownMenuItem 
-                      key={sector}
+                      key={sector.key}
                       className="text-blue-900 hover:text-green-600 hover:bg-blue-50 cursor-pointer"
                     >
-                      {sector}
+                      {sector.name}
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -154,12 +154,12 @@ const Navbar = () => {
               <div className="text-blue-900 font-medium text-base mb-2">{t('nav.sectors')}</div>
               {sectorItems.map((sector) => (
                 <a
-                  key={sector}
+                  key={sector.key}
                   href="#"
                   className="text-blue-700 hover:text-green-600 block px-3 py-1 text-sm transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {sector}
+                  {sector.name}
                 </a>
               ))}
             </div>

@@ -17,8 +17,11 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { useCountUp } from "@/hooks/useCountUp";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const SolarBenefits = () => {
+  const { t } = useLanguage();
+  
   // Count up hooks for each achievement metric
   const energySaving = useCountUp({ end: 67800, duration: 2500 });
   const productionLines = useCountUp({ end: 468, duration: 2000 });
@@ -32,22 +35,16 @@ const SolarBenefits = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
-              About Us
+              {t('about.title')}
             </h2>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-6 text-lg text-blue-700 leading-relaxed">
-              <p>
-                Sama Energy is made up of a group of professionals with experience in the energy sector working to assist businesses and businesses across the region to secure the most cost-efficient use of their facilities.
-              </p>
-              <p>
-                Since its establishment, Sama Energy has helped many companies develop their energy strategy and make better use of the complex demand and consumption of buildings. With clients as diverse as airports, commercial and residential buildings, labor camps and engineering projects, we are proud of our track record of delivering and delivering the best energy conservation projects and consistently reliable advice.
-              </p>
-              <p>
-                Thanks to our extensive experience and basic expertise, Sama Energy can obtain the largest range of customized solutions for your business and facilities, and we have a range of services for clients that help them grow.
-              </p>
+              <p>{t('about.para1')}</p>
+              <p>{t('about.para2')}</p>
+              <p>{t('about.para3')}</p>
             </div>
             
             {/* Modern Office Image */}
@@ -70,10 +67,10 @@ const SolarBenefits = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
-              Our Solar Solutions
+              {t('solutions.title')}
             </h2>
             <p className="text-xl text-blue-700 max-w-3xl mx-auto">
-              Comprehensive energy and production line services tailored to your specific needs
+              {t('solutions.subtitle')}
             </p>
           </div>
 
@@ -85,13 +82,13 @@ const SolarBenefits = () => {
                   <Zap className="h-10 w-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-blue-900 mb-4">
-                  Renewable Energy Services
+                  {t('solutions.renewableTitle')}
                 </h3>
                 <Link 
                   to="/services"
                   className="text-blue-600 hover:text-green-600 font-medium transition-colors duration-300"
                 >
-                  Learn More →
+                  {t('solutions.learnMore')} →
                 </Link>
               </CardContent>
             </Card>
@@ -103,13 +100,13 @@ const SolarBenefits = () => {
                   <Settings className="h-10 w-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-blue-900 mb-4">
-                  Production Line Services
+                  {t('solutions.productionTitle')}
                 </h3>
                 <Link 
                   to="/services"
                   className="text-blue-600 hover:text-green-600 font-medium transition-colors duration-300"
                 >
-                  Learn More →
+                  {t('solutions.learnMore')} →
                 </Link>
               </CardContent>
             </Card>
@@ -121,8 +118,8 @@ const SolarBenefits = () => {
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-green-600 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Our Achievements</h3>
-            <p className="text-xl text-blue-100">Delivering excellence in solar energy solutions</p>
+            <h3 className="text-3xl font-bold mb-4">{t('achievements.title')}</h3>
+            <p className="text-xl text-blue-100">{t('achievements.subtitle')}</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8 text-center">
@@ -133,7 +130,7 @@ const SolarBenefits = () => {
               <div className="text-4xl font-bold text-green-300 transition-all duration-300">
                 {energySaving.count.toLocaleString()}
               </div>
-              <div className="text-blue-100">Energy Saving (kWh)</div>
+              <div className="text-blue-100">{t('achievements.energySaving')}</div>
             </div>
             <div ref={productionLines.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
@@ -142,7 +139,7 @@ const SolarBenefits = () => {
               <div className="text-4xl font-bold text-green-300 transition-all duration-300">
                 {productionLines.count.toLocaleString()}
               </div>
-              <div className="text-blue-100">Operating Production Lines</div>
+              <div className="text-blue-100">{t('achievements.productionLines')}</div>
             </div>
             <div ref={successfulProjects.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
@@ -151,7 +148,7 @@ const SolarBenefits = () => {
               <div className="text-4xl font-bold text-green-300 transition-all duration-300">
                 {successfulProjects.count.toLocaleString()}
               </div>
-              <div className="text-blue-100">Successful Projects</div>
+              <div className="text-blue-100">{t('achievements.successfulProjects')}</div>
             </div>
             <div ref={workingHands.elementRef} className="space-y-2">
               <div className="flex items-center justify-center mb-3">
@@ -160,7 +157,7 @@ const SolarBenefits = () => {
               <div className="text-4xl font-bold text-green-300 transition-all duration-300">
                 {workingHands.count.toLocaleString()}
               </div>
-              <div className="text-blue-100">Working Hands</div>
+              <div className="text-blue-100">{t('achievements.workingHands')}</div>
             </div>
           </div>
         </div>
