@@ -1,20 +1,15 @@
-
 import { useState, useEffect } from "react";
 import { Sun, Zap, Leaf, ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const HeroSection = () => {
   const [energyFlow, setEnergyFlow] = useState(0);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setEnergyFlow(prev => (prev + 1) % 100);
     }, 50);
     return () => clearInterval(interval);
   }, []);
-
-  return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-green-800 text-white">
+  return <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-green-800 text-white">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-green-400 rounded-full blur-3xl"></div>
@@ -45,10 +40,7 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-semibold px-8 py-4 text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
-                Get Free Quote
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              
               <Button variant="outline" size="lg" className="border-2 border-green-400/50 text-white bg-transparent hover:bg-green-400/10 font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                 <Play className="mr-2 h-5 w-5" />
                 Watch Demo
@@ -77,20 +69,12 @@ const HeroSection = () => {
             <div className="relative bg-gradient-to-br from-blue-800/50 to-green-800/50 rounded-3xl p-8 shadow-2xl border border-green-400/20 backdrop-blur-sm">
               {/* Solar Panel Grid */}
               <div className="grid grid-cols-4 gap-3 mb-8">
-                {[...Array(16)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="aspect-square bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg border border-green-400/30 relative overflow-hidden shadow-lg"
-                  >
-                    <div 
-                      className="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-400 opacity-0 transition-opacity duration-500"
-                      style={{
-                        opacity: energyFlow > i * 6 ? 0.7 : 0
-                      }}
-                    ></div>
+                {[...Array(16)].map((_, i) => <div key={i} className="aspect-square bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg border border-green-400/30 relative overflow-hidden shadow-lg">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-400 opacity-0 transition-opacity duration-500" style={{
+                  opacity: energyFlow > i * 6 ? 0.7 : 0
+                }}></div>
                     <div className="absolute inset-2 border border-green-300/20 rounded"></div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
               {/* Energy Metrics */}
@@ -112,10 +96,9 @@ const HeroSection = () => {
                 </div>
 
                 <div className="w-full bg-blue-800/50 rounded-full h-3 overflow-hidden">
-                  <div 
-                    className="h-full bg-gradient-to-r from-green-400 to-blue-400 transition-all duration-100 rounded-full"
-                    style={{ width: `${energyFlow}%` }}
-                  ></div>
+                  <div className="h-full bg-gradient-to-r from-green-400 to-blue-400 transition-all duration-100 rounded-full" style={{
+                  width: `${energyFlow}%`
+                }}></div>
                 </div>
               </div>
             </div>
@@ -130,8 +113,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
