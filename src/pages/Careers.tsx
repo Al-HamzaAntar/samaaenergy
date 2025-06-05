@@ -209,7 +209,7 @@ const Careers = () => {
                           type="file"
                           accept=".pdf,.doc,.docx"
                           className="border-blue-200 focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="No file chosen"
+                          placeholder="Choose your CV file"
                           onChange={(e) => field.onChange(e.target.files?.[0]?.name || "")}
                         />
                       </FormControl>
