@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail, Target, Eye, Users, Quote, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,12 +11,11 @@ import HeroSection from "@/components/HeroSection";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
 const Index = () => {
-  const { t } = useLanguage();
-
-  return (
-    <div className="min-h-screen">
+  const {
+    t
+  } = useLanguage();
+  return <div className="min-h-screen">
       <Navbar />
       
       {/* Add padding-top to account for fixed navbar */}
@@ -257,10 +255,7 @@ const Index = () => {
                 </Card>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-semibold px-8 py-4 text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
-                    <Phone className="mr-2 h-5 w-5" />
-                    {t('contact.callQuote')}
-                  </Button>
+                  
                   <Button size="lg" variant="outline" className="border-2 border-green-400/50 text-white bg-transparent hover:bg-green-400/10 font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                     <Mail className="mr-2 h-5 w-5" />
                     {t('contact.emailConsultation')}
@@ -273,16 +268,9 @@ const Index = () => {
                 <Card className="bg-white/10 border-green-400/20 backdrop-blur-sm overflow-hidden">
                   <CardContent className="p-0">
                     <div className="relative h-96 w-full">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3522.9466050941937!2d44.2233161!3d15.2851632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603c5609c2b3759%3A0x2f1dca8e724fcfe7!2z2LPYp9mF2Kcg2KXZhtix2KzZiiAtIFNBTUEgRU5FUkdZ!5e1!3m2!1sar!2s!4v1748963101070!5m2!1sar!2s"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title="SAMA ENERGY Location - Sana'a, Yemen"
-                      ></iframe>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3522.9466050941937!2d44.2233161!3d15.2851632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603c5609c2b3759%3A0x2f1dca8e724fcfe7!2z2LPYp9mF2Kcg2KXZhtix2KzZiiAtIFNBTUEgRU5FUkdZ!5e1!3m2!1sar!2s!4v1748963101070!5m2!1sar!2s" width="100%" height="100%" style={{
+                      border: 0
+                    }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SAMA ENERGY Location - Sana'a, Yemen"></iframe>
                     </div>
                   </CardContent>
                 </Card>
@@ -297,8 +285,6 @@ const Index = () => {
       
       {/* Footer */}
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
