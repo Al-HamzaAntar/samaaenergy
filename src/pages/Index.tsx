@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail, Target, Eye, Users, Quote, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -231,8 +230,7 @@ const Index = () => {
                       <div>
                         <h4 className="text-xl font-semibold text-white mb-2">{t('contact.location')}</h4>
                         <p className="text-blue-200 leading-relaxed">
-                          Yemen - Sana'a - Al-Asbahi City - Forty Street<br />
-                          In front of the Royal Brewster Restaurant
+                          {t('contact.address')}
                         </p>
                       </div>
                     </div>
