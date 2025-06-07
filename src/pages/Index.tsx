@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail, Target, Eye, Users, Quote, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,11 +12,12 @@ import HeroSection from "@/components/HeroSection";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
 const Index = () => {
-  const {
-    t
-  } = useLanguage();
-  return <div className="min-h-screen">
+  const { t } = useLanguage();
+  
+  return (
+    <div className="min-h-screen">
       <Navbar />
       
       {/* Add padding-top to account for fixed navbar */}
@@ -30,7 +32,7 @@ const Index = () => {
                 {t('common.customers')}
               </h2>
               <p className="text-xl text-blue-700 max-w-3xl mx-auto">
-                Trusted by leading organizations worldwide
+                {t('common.customersSubtitle')}
               </p>
             </div>
 
@@ -44,7 +46,7 @@ const Index = () => {
                           <Users className="h-8 w-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-blue-900">WFP</h3>
-                        <p className="text-green-600 font-semibold mt-2">World Food Programme</p>
+                        <p className="text-green-600 font-semibold mt-2">{t('customers.wfp')}</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
@@ -56,7 +58,7 @@ const Index = () => {
                           <Users className="h-8 w-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-blue-900">UNICEF</h3>
-                        <p className="text-green-600 font-semibold mt-2">United Nations Children's Fund</p>
+                        <p className="text-green-600 font-semibold mt-2">{t('customers.unicef')}</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
@@ -68,7 +70,7 @@ const Index = () => {
                           <Users className="h-8 w-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-blue-900">WHO</h3>
-                        <p className="text-green-600 font-semibold mt-2">World Health Organization</p>
+                        <p className="text-green-600 font-semibold mt-2">{t('customers.who')}</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
@@ -80,7 +82,7 @@ const Index = () => {
                           <Users className="h-8 w-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-blue-900">SAVE THE CHILDREN</h3>
-                        <p className="text-green-600 font-semibold mt-2">International Organization</p>
+                        <p className="text-green-600 font-semibold mt-2">{t('customers.saveTheChildren')}</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
@@ -102,7 +104,7 @@ const Index = () => {
                 {t('common.ambitions')}
               </h2>
               <p className="text-xl text-blue-700 max-w-3xl mx-auto">
-                Leading the way towards a sustainable and energy-efficient future
+                {t('common.ambitionsSubtitle')}
               </p>
             </div>
 
@@ -114,7 +116,7 @@ const Index = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-blue-900 mb-4">{t('common.message')}</h3>
                   <p className="text-blue-700 leading-relaxed">
-                    To make the built environment a leading example of energy efficiency in the region and the world.
+                    {t('common.messageDescription')}
                   </p>
                 </CardContent>
               </Card>
@@ -126,7 +128,7 @@ const Index = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-blue-900 mb-4">{t('common.vision')}</h3>
                   <p className="text-blue-700 leading-relaxed">
-                    To make Yemen one of the most sustainable cities in the world
+                    {t('common.visionDescription')}
                   </p>
                 </CardContent>
               </Card>
@@ -138,7 +140,7 @@ const Index = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-blue-900 mb-4">{t('common.objectives')}</h3>
                   <p className="text-blue-700 leading-relaxed">
-                    Establishment of a contracting market for the implementation of energy works, services and production lines in Yemen
+                    {t('common.objectivesDescription')}
                   </p>
                 </CardContent>
               </Card>
@@ -154,7 +156,7 @@ const Index = () => {
                 {t('common.reviews')}
               </h2>
               <p className="text-xl text-blue-700 max-w-3xl mx-auto">
-                What our clients say about our solar energy solutions
+                {t('common.reviewsSubtitle')}
               </p>
             </div>
 
@@ -165,11 +167,11 @@ const Index = () => {
                     <Quote className="h-12 w-12 text-blue-600" />
                   </div>
                   <p className="text-blue-800 text-lg leading-relaxed mb-6 italic">
-                    "Here the opinion is placed"
+                    "{t('reviews.testimonial1')}"
                   </p>
                   <div className="text-center">
-                    <h4 className="text-xl font-bold text-blue-900">Mohammed</h4>
-                    <p className="text-green-600 font-semibold">UNICEF</p>
+                    <h4 className="text-xl font-bold text-blue-900">{t('reviews.customer1Name')}</h4>
+                    <p className="text-green-600 font-semibold">{t('reviews.customer1Company')}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -180,11 +182,11 @@ const Index = () => {
                     <Quote className="h-12 w-12 text-green-600" />
                   </div>
                   <p className="text-blue-800 text-lg leading-relaxed mb-6 italic">
-                    "Here the opinion is placed"
+                    "{t('reviews.testimonial2')}"
                   </p>
                   <div className="text-center">
-                    <h4 className="text-xl font-bold text-blue-900">Ahmed</h4>
-                    <p className="text-green-600 font-semibold">Al Rabi Energy Systems</p>
+                    <h4 className="text-xl font-bold text-blue-900">{t('reviews.customer2Name')}</h4>
+                    <p className="text-green-600 font-semibold">{t('reviews.customer2Company')}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -195,11 +197,11 @@ const Index = () => {
                     <Quote className="h-12 w-12 text-blue-600" />
                   </div>
                   <p className="text-blue-800 text-lg leading-relaxed mb-6 italic">
-                    "Here the opinion is placed"
+                    "{t('reviews.testimonial3')}"
                   </p>
                   <div className="text-center">
-                    <h4 className="text-xl font-bold text-blue-900">Ali</h4>
-                    <p className="text-green-600 font-semibold">FAO</p>
+                    <h4 className="text-xl font-bold text-blue-900">{t('reviews.customer3Name')}</h4>
+                    <p className="text-green-600 font-semibold">{t('reviews.customer3Company')}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -255,7 +257,6 @@ const Index = () => {
                 </Card>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  
                   <Button size="lg" variant="outline" className="border-2 border-green-400/50 text-white bg-transparent hover:bg-green-400/10 font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                     <Mail className="mr-2 h-5 w-5" />
                     {t('contact.emailConsultation')}
@@ -268,9 +269,16 @@ const Index = () => {
                 <Card className="bg-white/10 border-green-400/20 backdrop-blur-sm overflow-hidden">
                   <CardContent className="p-0">
                     <div className="relative h-96 w-full">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3522.9466050941937!2d44.2233161!3d15.2851632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603c5609c2b3759%3A0x2f1dca8e724fcfe7!2z2LPYp9mF2Kcg2KXZhtix2KzZiiAtIFNBTUEgRU5FUkdZ!5e1!3m2!1sar!2s!4v1748963101070!5m2!1sar!2s" width="100%" height="100%" style={{
-                      border: 0
-                    }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SAMA ENERGY Location - Sana'a, Yemen"></iframe>
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3522.9466050941937!2d44.2233161!3d15.2851632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603c5609c2b3759%3A0x2f1dca8e724fcfe7!2z2LPYp9mF2Kcg2KXZhtix2KzZiiAtIFNBTUEgRU5FUkdZ!5e1!3m2!1sar!2s!4v1748963101070!5m2!1sar!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style={{ border: 0 }} 
+                        allowFullScreen 
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade" 
+                        title="SAMA ENERGY Location - Sana'a, Yemen">
+                      </iframe>
                     </div>
                   </CardContent>
                 </Card>
@@ -285,6 +293,8 @@ const Index = () => {
       
       {/* Footer */}
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;

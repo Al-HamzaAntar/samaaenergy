@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Language = 'en' | 'ar';
@@ -168,13 +169,36 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'contact.callQuote': 'Call for Free Quote',
       'contact.emailConsultation': 'Email Consultation',
       
-      // Common
+      // Common - Our Customers, Our Ambitions, Customer Reviews sections
       'common.customers': 'Our Customers',
+      'common.customersSubtitle': 'Trusted by leading organizations worldwide',
       'common.ambitions': 'Our Ambitions',
+      'common.ambitionsSubtitle': 'Leading the way towards a sustainable and energy-efficient future',
       'common.reviews': 'Customer Reviews',
+      'common.reviewsSubtitle': 'What our clients say about our solar energy solutions',
       'common.message': 'Our Message',
+      'common.messageDescription': 'To make the built environment a leading example of energy efficiency in the region and the world.',
       'common.vision': 'Our Vision',
+      'common.visionDescription': 'To make Yemen one of the most sustainable cities in the world',
       'common.objectives': 'Objectives',
+      'common.objectivesDescription': 'Establishment of a contracting market for the implementation of energy works, services and production lines in Yemen',
+      
+      // Customer Reviews
+      'reviews.testimonial1': 'Here the opinion is placed',
+      'reviews.customer1Name': 'Mohammed',
+      'reviews.customer1Company': 'UNICEF',
+      'reviews.testimonial2': 'Here the opinion is placed',
+      'reviews.customer2Name': 'Ahmed',
+      'reviews.customer2Company': 'Al Rabi Energy Systems',
+      'reviews.testimonial3': 'Here the opinion is placed',
+      'reviews.customer3Name': 'Ali',
+      'reviews.customer3Company': 'FAO',
+      
+      // Customer Organizations
+      'customers.wfp': 'World Food Programme',
+      'customers.unicef': 'United Nations Children\'s Fund',
+      'customers.who': 'World Health Organization',
+      'customers.saveTheChildren': 'International Organization',
     },
     ar: {
       // Navigation
@@ -305,13 +329,36 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'contact.callQuote': 'اتصل للحصول على عرض سعر مجاني',
       'contact.emailConsultation': 'استشارة عبر البريد الإلكتروني',
       
-      // Common
+      // Common - Our Customers, Our Ambitions, Customer Reviews sections
       'common.customers': 'عملاؤنا',
+      'common.customersSubtitle': 'موثوق بنا من قبل المنظمات الرائدة في جميع أنحاء العالم',
       'common.ambitions': 'طموحاتنا',
+      'common.ambitionsSubtitle': 'نقود الطريق نحو مستقبل مستدام وفعال في الطاقة',
       'common.reviews': 'آراء العملاء',
+      'common.reviewsSubtitle': 'ما يقوله عملاؤنا عن حلول الطاقة الشمسية لدينا',
       'common.message': 'رسالتنا',
+      'common.messageDescription': 'جعل البيئة المبنية مثالاً رائداً لكفاءة الطاقة في المنطقة والعالم.',
       'common.vision': 'رؤيتنا',
+      'common.visionDescription': 'جعل اليمن واحدة من أكثر المدن استدامة في العالم',
       'common.objectives': 'الأهداف',
+      'common.objectivesDescription': 'إنشاء سوق المقاولات لتنفيذ أعمال الطاقة والخدمات وخطوط الإنتاج في اليمن',
+      
+      // Customer Reviews
+      'reviews.testimonial1': 'هنا يوضع الرأي',
+      'reviews.customer1Name': 'محمد',
+      'reviews.customer1Company': 'اليونيسف',
+      'reviews.testimonial2': 'هنا يوضع الرأي',
+      'reviews.customer2Name': 'أحمد',
+      'reviews.customer2Company': 'الربيع لأنظمة الطاقة',
+      'reviews.testimonial3': 'هنا يوضع الرأي',
+      'reviews.customer3Name': 'علي',
+      'reviews.customer3Company': 'منظمة الأغذية والزراعة',
+      
+      // Customer Organizations
+      'customers.wfp': 'برنامج الأغذية العالمي',
+      'customers.unicef': 'صندوق الأمم المتحدة للطفولة',
+      'customers.who': 'منظمة الصحة العالمية',
+      'customers.saveTheChildren': 'منظمة دولية',
     }
   };
 
