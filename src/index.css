@@ -64,9 +64,30 @@
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
   }
+  
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+  
+  #root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
   }
   
   /* RTL Support */
@@ -101,4 +122,14 @@
   [dir="rtl"] .text-right {
     text-align: left;
   }
+}
+
+/* Prevent horizontal scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
