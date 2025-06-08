@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Sun, Zap, Calculator, Leaf, TrendingUp, Home, ArrowRight, Phone, Mail, Target, Eye, Users, Quote, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import SolarBenefits from "@/components/SolarBenefits";
 import HeroSection from "@/components/HeroSection";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ScrollProgressBar from "@/components/ScrollProgressBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -17,6 +19,7 @@ const Index = () => {
   
   return (
     <div className="min-h-screen">
+      <ScrollProgressBar />
       <Navbar />
       
       {/* Add padding-top to account for fixed navbar */}
