@@ -12,6 +12,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Autoplay from "embla-carousel-autoplay";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -38,11 +39,22 @@ const Index = () => {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <Carousel className="w-full">
+              <Carousel 
+                className="w-full"
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 3000,
+                  }),
+                ]}
+              >
                 <CarouselContent>
                   
                   
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <CarouselItem>
                     <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
                       <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
                         <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -56,7 +68,7 @@ const Index = () => {
                     </Card>
                   </CarouselItem>
                   
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <CarouselItem>
                     <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
                       <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
                         <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -70,7 +82,7 @@ const Index = () => {
                     </Card>
                   </CarouselItem>
                   
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <CarouselItem>
                     <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
                       <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
                         <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -84,7 +96,7 @@ const Index = () => {
                     </Card>
                   </CarouselItem>
                   
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <CarouselItem>
                     <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
                       <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
                         <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -98,7 +110,7 @@ const Index = () => {
                     </Card>
                   </CarouselItem>
                   
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <CarouselItem>
                     <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
                       <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
                         <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -112,7 +124,7 @@ const Index = () => {
                     </Card>
                   </CarouselItem>
 
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <CarouselItem>
                     <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
                       <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
                         <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -126,7 +138,7 @@ const Index = () => {
                     </Card>
                   </CarouselItem>
 
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <CarouselItem>
                     <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
                       <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
                         <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -141,7 +153,7 @@ const Index = () => {
                   </CarouselItem>
 
                   
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                  <CarouselItem>
                     <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
                       <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
                         <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -338,7 +350,7 @@ const Index = () => {
                   <CardContent className="p-0">
                     <div className="relative h-96 w-full">
                       <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3522.9466050941937!2d44.2233161!3d15.2851632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603c5609c2b3759%3A0x2f1dca8e724fcfe7!2z2LPYp9mF2Kcg2KXZhtix2KzZiiAtIFNBTUEgRU5FUkdZ!5e1!3m2!1sar!2s" 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3522.9466050941937!2d44.2233161!3d15.2851632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603c5609c2b3759%3A0x2f1dca8e724fcfe7!2z2LPYp9mF2Kcg2KXZhtix2KrZiiAtIFNBTUEgRU5FUkdZ!5e1!3m2!1sar!2s" 
                         width="100%" 
                         height="100%" 
                         style={{ border: 0 }} 
