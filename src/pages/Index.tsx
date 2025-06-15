@@ -108,7 +108,7 @@ const Index = () => {
                           <Users className="h-8 w-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-blue-900">UNOPS</h3>
-                        <p className="text-green-600 font-semibold mt-2">{t('customers.unops')}</p>
+                        <p className="text-green-600 font-semibold mt-2">United Nations Office for Project Services</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
@@ -319,7 +319,7 @@ const Index = () => {
                   <CardContent className="p-0">
                     <div className="relative h-96 w-full">
                       <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3522.9466050941937!2d44.2233161!3d15.2851632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603c5609c2b3759%3A0x2f1dca8e724fcfe7!2z2LPYp9mF2Kcg2KXZhtix2KzZiiAtIFNBTUEgRU5FUkdZ!5e1!3m2!1sar!2s!4v1748963101070!5m2!1sar!2s" 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3522.9466050941937!2d44.2233161!3d15.2851632!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603c5609c2b3759%3A0x2f1dca8e724fcfe7!2z2LPYp9mF2Kcg2KXZhtix2KzZiiAtIFNBTUEgRU5FUkdZ!5e1!3m2!1sar!2s" 
                         width="100%" 
                         height="100%" 
                         style={{ border: 0 }} 
