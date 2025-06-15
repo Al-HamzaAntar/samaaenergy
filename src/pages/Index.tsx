@@ -38,130 +38,130 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <Carousel 
                 className="w-full"
                 opts={{
                   align: "start",
                   loop: true,
+                  slidesToScroll: 4,
                 }}
                 plugins={[
                   Autoplay({
-                    delay: 3000,
+                    delay: 4000,
                   }),
                 ]}
               >
-                <CarouselContent>
+                <CarouselContent className="-ml-2 md:-ml-4">
                   
-                  
-                  <CarouselItem>
+                  <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
                     <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                      <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
-                        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                          <Users className="h-8 w-8 text-white" />
+                      <CardContent className="p-6 text-center flex flex-col justify-between h-full min-h-[180px]">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-2xl font-bold text-blue-900 mb-2">WFP</h3>
-                          <p className="text-green-600 font-semibold text-sm leading-relaxed">{t('customers.wfp')}</p>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">WFP</h3>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.wfp')}</p>
                         </div>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                   
-                  <CarouselItem>
+                  <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
                     <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                      <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
-                        <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                          <Users className="h-8 w-8 text-white" />
+                      <CardContent className="p-6 text-center flex flex-col justify-between h-full min-h-[180px]">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-2xl font-bold text-blue-900 mb-2">UNICEF</h3>
-                          <p className="text-green-600 font-semibold text-sm leading-relaxed">{t('customers.unicef')}</p>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">UNICEF</h3>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.unicef')}</p>
                         </div>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                   
-                  <CarouselItem>
+                  <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
                     <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                      <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
-                        <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                          <Users className="h-8 w-8 text-white" />
+                      <CarouselContent className="p-6 text-center flex flex-col justify-between h-full min-h-[180px]">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-2xl font-bold text-blue-900 mb-2">WHO</h3>
-                          <p className="text-green-600 font-semibold text-sm leading-relaxed">{t('customers.who')}</p>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">WHO</h3>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.who')}</p>
                         </div>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                   
-                  <CarouselItem>
+                  <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
                     <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                      <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
-                        <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                          <Users className="h-8 w-8 text-white" />
+                      <CardContent className="p-6 text-center flex flex-col justify-between h-full min-h-[180px]">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-2xl font-bold text-blue-900 mb-2">SAVE THE CHILDREN</h3>
-                          <p className="text-green-600 font-semibold text-sm leading-relaxed">{t('customers.saveTheChildren')}</p>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">SAVE THE CHILDREN</h3>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.saveTheChildren')}</p>
                         </div>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                   
-                  <CarouselItem>
+                  <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
                     <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                      <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
-                        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                          <Users className="h-8 w-8 text-white" />
+                      <CardContent className="p-6 text-center flex flex-col justify-between h-full min-h-[180px]">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-2xl font-bold text-blue-900 mb-2">ICRC</h3>
-                          <p className="text-green-600 font-semibold text-sm leading-relaxed">International Committee of the Red Cross</p>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">ICRC</h3>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">International Committee of the Red Cross</p>
                         </div>
                       </CardContent>
                     </Card>
                   </CarouselItem>
 
-                  <CarouselItem>
+                  <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
                     <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                      <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
-                        <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                          <Users className="h-8 w-8 text-white" />
+                      <CardContent className="p-6 text-center flex flex-col justify-between h-full min-h-[180px]">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-2xl font-bold text-blue-900 mb-2">UNOPS</h3>
-                          <p className="text-green-600 font-semibold text-sm leading-relaxed">United Nations Office for Project Services</p>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">UNOPS</h3>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">United Nations Office for Project Services</p>
                         </div>
                       </CardContent>
                     </Card>
                   </CarouselItem>
 
-                  <CarouselItem>
+                  <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
                     <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                      <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
-                        <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                          <Users className="h-8 w-8 text-white" />
+                      <CardContent className="p-6 text-center flex flex-col justify-between h-full min-h-[180px]">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-2xl font-bold text-blue-900 mb-2">UNDP</h3>
-                          <p className="text-green-600 font-semibold text-sm leading-relaxed">United Nations Development Programme</p>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">UNDP</h3>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">United Nations Development Programme</p>
                         </div>
                       </CardContent>
                     </Card>
                   </CarouselItem>
 
                   
-                  <CarouselItem>
+                  <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
                     <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                      <CardContent className="p-8 text-center flex flex-col justify-between h-full min-h-[200px]">
-                        <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                          <Users className="h-8 w-8 text-white" />
+                      <CardContent className="p-6 text-center flex flex-col justify-between h-full min-h-[180px]">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-2xl font-bold text-blue-900 mb-2">NRC</h3>
-                          <p className="text-green-600 font-semibold text-sm leading-relaxed">Norwegian Refugee Council</p>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">NRC</h3>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">Norwegian Refugee Council</p>
                         </div>
                       </CardContent>
                     </Card>
