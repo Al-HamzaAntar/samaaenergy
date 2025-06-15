@@ -84,7 +84,7 @@ const Index = () => {
                   
                   <CarouselItem className="pl-2 md:pl-4 basis-1/2 md:basis-1/4">
                     <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                      <CarouselContent className="p-6 text-center flex flex-col justify-between h-full min-h-[180px]">
+                      <CardContent className="p-6 text-center flex flex-col justify-between h-full min-h-[180px]">
                         <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                           <Users className="h-6 w-6 text-white" />
                         </div>
