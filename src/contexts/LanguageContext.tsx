@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Language = 'en' | 'ar';
@@ -93,7 +92,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'services.productionContent2': 'We excel at Sama Energy in providing electronic and electrical services, including electrical services, electrical installations for all production lines, designing and maintaining control panels for all production lines, in addition to operating, adjusting and maintaining packaging machines.',
       'services.productionContent3': 'We offer a distinctive, high-performance range of reliable engines, couplings and gearboxes for every industry and application that meets the highest standards of performance and quality requirements.',
       'services.productionContent4': 'Mechanical services include providing and installing all spare parts required for production lines and factory supplies, and increasing the efficiency of production lines.',
-      'services.productionContent5': 'We manufacture and turn difficult mechanical parts with high precision, cutting and drilling machines for iron and concrete, and design and produce hydraulic control circuits and systems. Manufacture of mobile platforms, winches, winches and open lifts.',
+      'services.productionContent5': 'We manufacture and turn difficult mechanical parts with high precision, وآلات القطع والحفر للحديد والخرسانة, and design and produce hydraulic control circuits and systems. Manufacture of mobile platforms, winches, winches and open lifts.',
       
       // Training
       'training.title': 'Training Programs',
@@ -144,7 +143,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'careers.form.submit': 'Submit',
       'careers.form.submitting': 'Submitting...',
       'careers.form.namePlaceholder': 'Enter your full name',
-      'careers.form.emailPlaceholder': 'example@email.com',
+      'training.form.emailPlaceholder': 'example@email.com',
       'careers.form.phonePlaceholder': '9xxxxxxxx',
       'careers.form.cvPlaceholder': 'Choose your CV file',
       'careers.form.additionalPlaceholder': 'Add any additional information you would like to share...',
@@ -194,7 +193,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'reviews.testimonial3': 'Here the opinion is placed',
       'reviews.customer3Name': 'Ali',
       'reviews.customer3Company': 'FAO',
-      
+
       // Customer Organizations
       'customers.wfp': 'World Food Programme',
       'customers.unicef': 'United Nations Children\'s Fund',
@@ -309,7 +308,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'careers.form.submit': 'إرسال',
       'careers.form.submitting': 'جاري الإرسال...',
       'careers.form.namePlaceholder': 'أدخل اسمك الكامل',
-      'careers.form.emailPlaceholder': 'example@email.com',
+      'training.form.emailPlaceholder': 'example@email.com',
       'careers.form.phonePlaceholder': '9xxxxxxxx',
       'careers.form.cvPlaceholder': 'اختر ملف السيرة الذاتية',
       'careers.form.additionalPlaceholder': 'أضف أي معلومات إضافية تود مشاركتها...',
@@ -359,7 +358,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'reviews.testimonial3': 'هنا يوضع الرأي',
       'reviews.customer3Name': 'علي',
       'reviews.customer3Company': 'منظمة الأغذية والزراعة',
-      
+
       // Customer Organizations
       'customers.wfp': 'برنامج الأغذية العالمي',
       'customers.unicef': 'صندوق الأمم المتحدة للطفولة',
@@ -373,7 +372,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   };
 
   const t = (key: string): string => {
-    return translations[language][key] || key;
+    // Always fall back to the key if translation is missing:
+    return (translations[language][key] !== undefined && translations[language][key] !== null)
+      ? translations[language][key]
+      : key;
   };
 
   return (
