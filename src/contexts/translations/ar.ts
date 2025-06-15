@@ -102,6 +102,7 @@ const ar = {
   'careers.form.submit': 'إرسال',
   'careers.form.submitting': 'جاري الإرسال...',
   'careers.form.namePlaceholder': 'أدخل اسمك الكامل',
+  'careers.form.emailPlaceholder': 'example@email.com',
   'training.form.emailPlaceholder': 'example@email.com',
   'careers.form.phonePlaceholder': '9xxxxxxxx',
   'careers.form.cvPlaceholder': 'اختر ملف السيرة الذاتية',
