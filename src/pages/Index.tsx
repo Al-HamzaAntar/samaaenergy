@@ -41,6 +41,7 @@ const Index = () => {
               <Carousel className="w-full">
                 <CarouselContent>
                   
+                  
                   <CarouselItem className="md:basis-1/2 lg:basis-1/4">
                     <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                       <CardContent className="p-8 text-center">
@@ -120,11 +121,12 @@ const Index = () => {
                           <Users className="h-8 w-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-blue-900">UNDP</h3>
-                        <p className="text-green-600 font-semibold mt-2">{t('customers.undp')}</p>
+                        <p className="text-green-600 font-semibold mt-2">United Nations Development Programme</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
 
+                  
                   <CarouselItem className="md:basis-1/2 lg:basis-1/4">
                     <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
                       <CardContent className="p-8 text-center">
@@ -144,6 +146,7 @@ const Index = () => {
           </div>
         </section>
 
+        
         <SolarBenefits />
 
         {/* Our Ambitions Section */}
