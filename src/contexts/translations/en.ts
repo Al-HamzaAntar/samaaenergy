@@ -1,3 +1,4 @@
+
 const en = {
   // Navigation
   'nav.home': 'Home',
@@ -102,7 +103,7 @@ const en = {
   'careers.form.submit': 'Submit',
   'careers.form.submitting': 'Submitting...',
   'careers.form.namePlaceholder': 'Enter your full name',
-  'training.form.emailPlaceholder': 'example@email.com',
+  'careers.form.emailPlaceholder': 'example@email.com',
   'careers.form.phonePlaceholder': '9xxxxxxxx',
   'careers.form.cvPlaceholder': 'Choose your CV file',
   'careers.form.additionalPlaceholder': 'Add any additional information you would like to share...',
