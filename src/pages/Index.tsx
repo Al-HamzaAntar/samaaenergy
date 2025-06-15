@@ -134,7 +134,7 @@ const Index = () => {
                           <Users className="h-8 w-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-blue-900">NRC</h3>
-                        <p className="text-green-600 font-semibold mt-2">{t('customers.nrc')}</p>
+                        <p className="text-green-600 font-semibold mt-2">Norwegian Refugee Council</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
