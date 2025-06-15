@@ -88,6 +88,54 @@ const Index = () => {
                       </CardContent>
                     </Card>
                   </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                    <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                      <CardContent className="p-8 text-center">
+                        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                          <Users className="h-8 w-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-blue-900">ICRC</h3>
+                        <p className="text-green-600 font-semibold mt-2">{t('customers.icrc')}</p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                    <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                      <CardContent className="p-8 text-center">
+                        <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                          <Users className="h-8 w-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-blue-900">UNOPS</h3>
+                        <p className="text-green-600 font-semibold mt-2">{t('customers.unops')}</p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                    <Card className="bg-gradient-to-br from-blue-50 to-green-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                      <CardContent className="p-8 text-center">
+                        <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                          <Users className="h-8 w-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-blue-900">UNDP</h3>
+                        <p className="text-green-600 font-semibold mt-2">{t('customers.undp')}</p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                    <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                      <CardContent className="p-8 text-center">
+                        <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                          <Users className="h-8 w-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-blue-900">NRC</h3>
+                        <p className="text-green-600 font-semibold mt-2">{t('customers.nrc')}</p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
                 </CarouselContent>
                 <CarouselPrevious />
                 <CarouselNext />
