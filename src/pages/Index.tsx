@@ -117,7 +117,7 @@ const Index = () => {
                           <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-lg font-bold text-blue-900 mb-2">ICRC</h3>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">{t('customers.icrc')}</h3>
                           <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.icrc')}</p>
                         </div>
                       </CardContent>
@@ -131,7 +131,7 @@ const Index = () => {
                           <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-lg font-bold text-blue-900 mb-2">UNOPS</h3>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">{t('customers.unops')}</h3>
                           <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.unops')}</p>
                         </div>
                       </CardContent>
@@ -145,7 +145,7 @@ const Index = () => {
                           <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-lg font-bold text-blue-900 mb-2">UNDP</h3>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">{t('customers.undp')}</h3>
                           <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.undp')}</p>
                         </div>
                       </CardContent>
@@ -160,7 +160,7 @@ const Index = () => {
                           <Users className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
-                          <h3 className="text-lg font-bold text-blue-900 mb-2">NRC</h3>
+                          <h3 className="text-lg font-bold text-blue-900 mb-2">{t('customers.nrc')}</h3>
                           <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.nrc')}</p>
                         </div>
                       </CardContent>
