@@ -118,7 +118,7 @@ const Index = () => {
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
                           <h3 className="text-lg font-bold text-blue-900 mb-2">ICRC</h3>
-                          <p className="text-green-600 font-semibold text-xs leading-relaxed">International Committee of the Red Cross</p>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.icrc')}</p>
                         </div>
                       </CardContent>
                     </Card>
@@ -132,7 +132,7 @@ const Index = () => {
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
                           <h3 className="text-lg font-bold text-blue-900 mb-2">UNOPS</h3>
-                          <p className="text-green-600 font-semibold text-xs leading-relaxed">United Nations Office for Project Services</p>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.unops')}</p>
                         </div>
                       </CardContent>
                     </Card>
@@ -146,7 +146,7 @@ const Index = () => {
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
                           <h3 className="text-lg font-bold text-blue-900 mb-2">UNDP</h3>
-                          <p className="text-green-600 font-semibold text-xs leading-relaxed">United Nations Development Programme</p>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.undp')}</p>
                         </div>
                       </CardContent>
                     </Card>
@@ -161,7 +161,7 @@ const Index = () => {
                         </div>
                         <div className="flex-grow flex flex-col justify-center">
                           <h3 className="text-lg font-bold text-blue-900 mb-2">NRC</h3>
-                          <p className="text-green-600 font-semibold text-xs leading-relaxed">Norwegian Refugee Council</p>
+                          <p className="text-green-600 font-semibold text-xs leading-relaxed">{t('customers.nrc')}</p>
                         </div>
                       </CardContent>
                     </Card>

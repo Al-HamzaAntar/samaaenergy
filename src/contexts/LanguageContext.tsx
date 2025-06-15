@@ -200,6 +200,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'customers.unicef': 'United Nations Children\'s Fund',
       'customers.who': 'World Health Organization',
       'customers.saveTheChildren': 'International Organization',
+      'customers.icrc': 'International Committee of the Red Cross',
+      'customers.unops': 'United Nations Office for Project Services',
+      'customers.undp': 'United Nations Development Programme',
+      'customers.nrc': 'Norwegian Refugee Council',
     },
     ar: {
       // Navigation
@@ -361,6 +365,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'customers.unicef': 'صندوق الأمم المتحدة للطفولة',
       'customers.who': 'منظمة الصحة العالمية',
       'customers.saveTheChildren': 'منظمة دولية',
+      'customers.icrc': 'اللجنة الدولية للصليب الأحمر',
+      'customers.unops': 'مكتب الأمم المتحدة لخدمات المشاريع',
+      'customers.undp': 'برنامج الأمم المتحدة الإنمائي',
+      'customers.nrc': 'المجلس النرويجي للاجئين',
     }
   };
 
