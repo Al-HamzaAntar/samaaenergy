@@ -1,6 +1,6 @@
 ## Project info
 
-**URL**: https://firstsunenergy.lovable.app/
+**URL**: https://samaaenergy.lovable.app/
 
 Follow these steps:
 
